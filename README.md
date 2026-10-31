@@ -27,3 +27,7 @@ I am pleased to publish a full-fledged FoundryVTT system for the [Hogwart RPG](h
 <br>The system will be updated and developed as I plan to expand into FoundryVTT.<br>
 Best regards,<br>
 AryaWeronika
+
+# FR
+Le système est également disponible en français (v1.1.0+). La terminologie suit la traduction française [Hogwarts : Le JDR](https://mori-drak.itch.io/hogwarts-le-jdr) (traduction de fan autorisée par l’auteur original).<br>
+**Installation :** collez ce [lien de manifeste](https://github.com/PrevotYann/Hogwart-RPG-Foundry/releases/latest/download/system.json) dans la fenêtre d’installation de système de Foundry, puis choisissez « Français » dans les paramètres de langue.
