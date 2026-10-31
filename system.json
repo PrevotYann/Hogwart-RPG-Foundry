@@ -2,7 +2,7 @@
   "id": "systemHogwartRPG",
   "title": "Hogwart RPG",
   "description": "Foundry system for Hogwarts RPG, powered by the PBTA engine. Available in English, Polish and French. The system and mechanics were designed by David Brunell-Brutman.",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "compatibility": {
     "minimum": "13",
     "verified": "14",
@@ -96,7 +96,7 @@
   ],
   "url": "https://github.com/PrevotYann/Hogwart-RPG-Foundry",
   "manifest": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/releases/latest/download/system.json",
-  "download": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/releases/download/v2.1.0/system.zip",
+  "download": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/releases/download/v2.1.1/system.zip",
   "readme": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/blob/main/README.md",
   "bugs": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/issues"
 }

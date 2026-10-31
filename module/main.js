@@ -213,6 +213,10 @@ Hooks.once("init", async function () {
         label: "HOGWART.UI.SheetItem"
     });
 
+    game.settings.register(SYSTEM_ID, "aventureProposee", {
+        scope: "world", config: false, type: Boolean, default: false
+    });
+
     await foundry.applications.handlebars.loadTemplates([
         "systems/systemHogwartRPG/templates/actor-history.hbs"
     ]);
@@ -220,7 +224,19 @@ Hooks.once("init", async function () {
 
 Hooks.once("ready", async function () {
     await inicjalizujSceneStartowa();
+    await zaproponujPrzygode();
 });
+
+// Raz na świat: otwórz okno importu przygody z kompendium dla MG
+async function zaproponujPrzygode() {
+    if (!game.user.isGM || game.settings.get(SYSTEM_ID, "aventureProposee")) return;
+    const pack = game.packs.get(`${SYSTEM_ID}.aventure-citrouilles`);
+    if (!pack) return;
+    await game.settings.set(SYSTEM_ID, "aventureProposee", true);
+    const index = await pack.getIndex();
+    const adventure = index.size ? await pack.getDocument(index.contents[0]._id) : null;
+    adventure?.sheet.render(true);
+}
 
 Hooks.on("renderChatMessageHTML", (message, html) => {
     html.querySelectorAll(".btn-moj-ruch").forEach(btn => btn.addEventListener("click", async event => {

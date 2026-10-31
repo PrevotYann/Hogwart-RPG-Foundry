@@ -25,7 +25,7 @@ const NOW = Date.UTC(2026, 9, 31);
 const id = (...parts) => crypto.createHash("sha1").update(parts.join("|")).digest("hex").slice(0, 16);
 
 const stats = () => ({
-  coreVersion: "14", systemId: SYSTEM, systemVersion: "2.1.0",
+  coreVersion: "14", systemId: SYSTEM, systemVersion: "2.1.1",
   createdTime: NOW, modifiedTime: NOW, lastModifiedBy: null,
   compendiumSource: null, duplicateSource: null, exportSource: null
 });
@@ -217,7 +217,7 @@ function adventurePack() {
 
   const token = (a, linked, disposition) => ({
     name: a.name, actorLink: linked, disposition, displayName: 30,
-    width: a.size || 1, height: a.size || 1,
+    width: a.size || 1, height: a.size || 1, depth: a.size || 1,
     texture: { src: `${ART}/tokens/${a.token}.png` }, sight: { enabled: false }
   });
   const actorDoc = (a, i, type, folder, extra) => ({
@@ -233,7 +233,7 @@ function adventurePack() {
     })),
     ...data.npcs.map((a, i) => actorDoc(a, i, "npc", "f-pnj", { system: a.system, prototypeToken: token(a, true, 0) })),
     ...data.creatures.map((a, i) => actorDoc(a, i, "npc", "f-creatures", { system: a.system, prototypeToken: token(a, !a.unlinked, -1) })),
-    actorDoc(data.narrator, 0, "narrator", "f-actors", { system: data.narrator.system, prototypeToken: { name: data.narrator.name, actorLink: true } })
+    actorDoc(data.narrator, 0, "narrator", "f-actors", { system: data.narrator.system, prototypeToken: { name: data.narrator.name, actorLink: true, width: 1, height: 1, depth: 1 } })
   ];
 
   const journal = journals.map((j, i) => ({

@@ -46,6 +46,10 @@ Le système est disponible en français : la terminologie et les textes suivent 
 - Sorts et potions sous forme d’objets : glissés sur une fiche, ils apparaissent dans l’onglet Sorts (« Sorts et potions supplémentaires ») et se lancent d’un clic, avec les mêmes règles que les sorts de la liste.
 - Les 27 illustrations de l’aventure sont finalisées : 4 cartes JPG sans texte ni grille incrustée, 14 portraits et créatures PNG à fond transparent, 8 icônes PNG et une couverture JPG (`assets/aventure-citrouilles/`). Les dimensions des scènes, la grille Foundry de 100 px et les coordonnées des jetons et notes sont conservées. Prompts de génération et détails : [direction artistique](tools/adventure-art.md).
 
+**Correctif (v2.1.1)**
+- L’aventure s’ouvre correctement dans Foundry v14 (le jeton des Notes de la Narratrice n’avait pas de dimensions, ce qui invalidait toute l’aventure).
+- À la première ouverture d’un monde, la fenêtre « Importer l’aventure » s’ouvre automatiquement pour la Narratrice (une seule fois par monde).
+
 Le contenu du jeu original et de sa traduction est distribué sous licence [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) ; cette œuvre transformative n’est pas à vendre et n’est ni autorisée ni approuvée par J.K. Rowling ou Warner Bros.
 
 **Développement :** les compendiums sont générés depuis `src/packs` avec `tools/build-packs.cjs` (nécessite le module `classic-level` de Foundry) ; `tools/check.mjs` et `tools/validate-packs.mjs` valident le manifeste, les templates, les traductions et les documents.
