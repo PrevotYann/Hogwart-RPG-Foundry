@@ -1,0 +1,7 @@
+packs/** binary
+*.pdf binary
+*.webp binary
+*.png binary
+src/ export-ignore
+tools/ export-ignore
+.gitattributes export-ignore

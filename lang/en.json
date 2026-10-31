@@ -1,4 +1,14 @@
-﻿{
+{
+  "TYPES": {
+    "Actor": {
+      "character": "Main Character",
+      "narrator": "Narrator"
+    },
+    "Item": {
+      "przedmiot": "Magical Object",
+      "zaklecie": "Spell"
+    }
+  },
   "HOGWART": {
     "Narrator": {
       "Rok": "YEAR:",
@@ -101,7 +111,6 @@
       "NoweZaklecie": "Learn a new spell from your Year. You may do this as many times as you’d like.",
       "MagicznyPrzedmiot": "Aquire a magical object. You mays do this as many times as you’d like.",
       "OdzyskajSzczescie": "Regain 1 marked point of Luck. You may do this as many times as you’d like."
-
     },
     "EQ": {
       "EqTitle": "Magical Objects"
@@ -288,6 +297,13 @@
       "op": "Write your character's story here..."
     },
     "Glowna": {
+      "1": "1st Year",
+      "2": "2nd Year",
+      "3": "3rd Year",
+      "4": "4th Year",
+      "5": "5th Year",
+      "6": "6th Year",
+      "7": "7th Year",
       "Name": "Name",
       "Nameo": "Write the name...",
       "House": "House",
@@ -305,14 +321,7 @@
       "Patronus": "Patronus",
       "Pure": "Pure-blood",
       "Half": "Half-blood",
-      "Muggleborn": "Muggle-born",
-      "1": "1st Year",
-      "2": "2nd Year",
-      "3": "3rd Year",
-      "4": "4th Year",
-      "5": "5th Year",
-      "6": "6th Year",
-      "7": "7th Year"
+      "Muggleborn": "Muggle-born"
     },
     "Hexed": {
       "Tytul": "Select trait",
@@ -336,70 +345,161 @@
       "PartialDesc": "Partial success. You succeed, but with a cost or complication.",
       "Failure": "Failure (1-6)",
       "FailureDesc": "Failure. Mark 1 XP and prepare for consequences."
+    },
+    "Quidditch": {
+      "Title": "Quidditch",
+      "Match": {
+        "odwaga": "+Bravery: your team is playing boldly",
+        "spryt": "+Cunning: your team is playing dirty",
+        "intelekt": "+Intellect: your team is playing tactically",
+        "lojalnosc": "+Loyalty: your team is playing with great teamwork"
+      },
+      "Snitch": {
+        "odwaga": "+Bravery: your Seeker makes a daring maneuver to catch the Snitch",
+        "spryt": "+Cunning: your team sabotages the other Seeker to catch the Snitch",
+        "intelekt": "+Intellect: your team outwits the other Seeker to catch the Snitch",
+        "lojalnosc": "+Loyalty: a teammate helps your Seeker catch the Snitch"
+      }
+    },
+    "UI": {
+      "SheetCharacter": "Hogwarts Character Sheet",
+      "SheetNarrator": "Narrator Notes",
+      "SheetItem": "Hogwarts Item",
+      "SceneName": "Common Room (Start)",
+      "SceneNav": "Start",
+      "Roll": "Roll",
+      "PickApproach": "How is your team playing?",
+      "FriendOption": "+1: the person you help or hinder is your Friend or Rival",
+      "SubjectOption": "+1: roll related to your Favourite Subject",
+      "OtherModifier": "Other modifier",
+      "ShiftHint": "Tip: Shift+click a trait to roll without this window.",
+      "FriendBonus": "Friend / Rival",
+      "SubjectBonus": "Favourite Subject",
+      "OtherBonus": "Other",
+      "Unconscious": "{name} is Unconscious and cannot act!",
+      "XpMarked": "Failure: Experience point marked ({n}/4).",
+      "XpFull": "You may take an Advancement, then clear your marked Experience!",
+      "XpAlreadyFull": "All 4 Experience points are already marked: take an Advancement, then clear your Experience.",
+      "SpendLuck": "Mark a point of Luck to change the result to 10+",
+      "LuckSpent": "{name} marks a point of Luck: the result becomes 10+!",
+      "NoLuck": "No Luck points left.",
+      "LuckAlreadyUsed": "Luck has already been used for this roll.",
+      "NotOwner": "You do not control this character.",
+      "CastTitle": "Cast a Spell",
+      "BrewTitle": "Concoct a Potion",
+      "UnknownTitle": "Unknown spell or potion",
+      "UnknownSpell": "{name} doesn’t know “{spell}”. Mark a point of Luck to try anyway?",
+      "UnknownNoLuck": "You don’t know “{spell}” and have no Luck left.",
+      "LuckForUnknown": "Luck point marked: unknown spell or potion.",
+      "Mastered": "“{spell}” was learned two or more Years ago: you can always cast it without rolling, unless you’re in a stressful situation (Shift+click to roll).",
+      "SpellsHelp": "Tick the spells you know. Click a name to cast it (or concoct the potion): unknown spell = 1 Luck point; spell from two or more Years ago = success without a roll (Shift+click to roll).",
+      "ExitTitle": "Exit the story?",
+      "ExitButton": "Roll to exit the story",
+      "ExitNotAll": "Not all 8 Conditions are marked.",
+      "ExitPrompt": "{name} has marked all 8 Conditions! Roll +your highest trait to see if you exit the story.",
+      "ScarReminder": "You now have a physical or mental scar: write it on your sheet.",
+      "NewItem": "New magical object",
+      "Use": "Use (roll +Magic)",
+      "Edit": "Edit",
+      "Delete": "Delete",
+      "Description": "Description",
+      "ItemsHelp": "Drop objects from the compendium here; click a name to use it.",
+      "HousePoints": "Give / take points",
+      "PointsAmount": "Points",
+      "Points5": "5 – simple things (right answer in class / not paying attention)",
+      "Points10": "10 – minor things (clever homework / late to class)",
+      "Points20": "20 – significant things (disobeying a teacher, out after curfew)",
+      "Points50": "50 – major things (saving / endangering another student)",
+      "PointsGive": "Give points",
+      "PointsTake": "Take points",
+      "PointsReason": "Reason",
+      "PointsGiven": "{points} points to {house}!",
+      "PointsTaken": "{points} points from {house}!",
+      "Confirm": "Confirm",
+      "StartPoints": "Roll starting points",
+      "StartPointsConfirm": "Roll 1d6 for each House on the non-player character points table (250 to 375)? Current points will be replaced.",
+      "RollWinner": "Roll last year’s winner (House table)",
+      "EndSession": "End of session",
+      "EndSessionMsg": "<ul><li>Each player may write down or erase Friends and Rivals.</li><li>Players with 4 Experience take an Advancement.</li><li>Are there new Mysteries to write down, or solved Mysteries to cross off?</li><li>Update your Threats.</li></ul>",
+      "EndSessionAdvance": "Advancements to take: {names}",
+      "EndYear": "End of school year",
+      "EndYearConfirm": "All main characters regain all their Luck points.",
+      "AdvanceYear": "Move students up to the next Year",
+      "EndYearMsg": "<p>The school year is over: every witch and wizard regains all their Luck and takes an Advancement. Don’t forget to award the House Cup and the Quidditch Cup!</p>"
     }
   },
-  
-    "MOVES": {
-      "stan-w-obliczu": {
-        "name": "STAND IN THE FACE OF DANGER",
-        "success": "On a 10+, pick one:<br>• You stand firm and nobody gets hurt.<br>• You aren’t hurt, and you hurt the threat right back.",
-        "compromise": "On a 7-9, pick one:<br>• You hurt the threat, but it hurts you as well.<br>• You aren’t able to act, but the threat backs off.<br>• You flee, but you don’t suffer any Serious Consequences.<br>• You avoid Serious Consequences, but someone else suffers them instead.",
-        "failure": "On a 6-, mark a point of Experience. You aren’t able to face the danger, and the Narrator may tell you a Serious Consequence that happens as a result."
-      },
-      "zdobadz-czego-szukasz": {
-        "name": "GET WHAT YOU SEEK",
-        "success": "On a 10+, you get what you wanted, no problem.",
-        "compromise": "On a 7-9, you get what you wanted, but (pick one)...<br>• The person you got it from is suspicious.<br>• You must give or promise something in return.<br>• The person you got it from changes their attitude towards you.",
-        "failure": "On a 6-, mark a point of Experience. You don’t get what you wanted, and the Narrator may tell you a Serious Consequence that happens as a result."
-      },
-      "pomoz-lub-przeszkodz": {
-        "name": "HELP OR HINDER SOMEONE",
-        "success": "<b>FOR OTHER MAIN CHARACTERS</b><br>On a 10+, pick one:<br>• Give them +/-1 to their roll.<br>• Prevent them from taking a Condition.<br>• Offer them 1 Experience to stop what they’re doing.<br><br><b>FOR NARRATOR CHARACTERS</b><br>On a 10+, you help or hinder them as you want. ",
-        "compromise": "<b>FOR OTHER MAIN CHARACTERS</b><br>On a 7-9, pick one of the above options, but take a Condition as a result of your efforts. <br><br><b>FOR NARRATOR CHARACTERS</b><br>On a 7-9, you help or hinder them, but (pick one)...<br>• You take a Condition in the process.<br>• They’re accidentally hurt in the process.<br>• They are upset with you for doing so.<br>• They are suspicious of your motives.",
-        "failure": "<b>FOR OTHER PLAYER CHARACTERS</b><br>On a 6-, mark an Experience point. You cannot help or hinder them, and the GM may describe serious consequences that result.<br><br><b>FOR NON-PLAYER CHARACTERS (GM)</b><br>On a 6-, mark an Experience point. You cannot help or hinder them, and the GM may describe serious consequences that result."
-      },
-      "zbliz-sie-stworzenie": {
-        "name": "APPROACH A MAGICAL CREATURE",
-        "success": "On a 10+, the creature acts as you want.",
-        "compromise": "On a 7-9, pick one:<br>• The creature acts as you want, but you take a Condition for your efforts.<br>• The creature acts as you want, but it attracts unwanted attention.<br>• The creature doesn't act as you want, but it does something else helpful.",
-        "failure": "On a 6-, mark a point of Experience. The creature goes wild, and the Narrator may tell you a Serious Consequence that happens as a result."
-      },
-      "ukryj-sie": {
-        "name": "HIDE & SNEAK",
-        "success": "On a 10+, you or whatever you’re hiding aren’t detected. ",
-        "compromise": "On a 7-9, pick one:<br>• Someone or something is looking for you or what you’ve hidden.<br>• Someone or something knows you’re here or that you’ve hidden something, but not where.<br>•  You leave some kind of trace or evidence behind.",
-        "failure": "On a 6-, mark a point of Experience. You or whatever you’re hiding are found, and the Narrator may tell you a Serious Consequence that happens as a result."
-      },
-      "zdobadz-wiedze": {
-        "name": "GAIN KNOWLEDGE",
-        "success": "On a 10+, you gain the knowledge you wanted. You may ask the Narrator a question and they must give a true answer.<br>You might ask:<br>• What here isn’t what it seems to be?<br>•  Where is the thing I’m looking for?<br>• What’s the history of this?<br>• How do I make this useful?<br>• Are they telling the truth?<br>• What do they really want?<br>• What do I remember about this?",
-        "compromise": "On a 7-9, you get some of the knowledge you wanted. You may ask the Narrator a question. They must give you a true answer, but they don’t have to give you a full answer.<br>You might ask:<br>• What here isn’t what it seems to be?<br>•  Where is the thing I’m looking for?<br>• What’s the history of this?<br>• How do I make this useful?<br>• Are they telling the truth?<br>• What do they really want?<br>• What do I remember about this?",
-        "failure": "On a 6-, mark a point of Experience. You’re not sure if you got the knowledge you wanted. You may ask the Narrator a question, but they don’t have to give you a full answer, or a true one. The Narrator may also tell you a Serious Consequence that happens as a result."
-      },
-      "rzuc-zaklecie": {
-        "name": "CAST A SPELL",
-        "success": "On a 10+, you successfully cast the spell the way you wanted.",
-        "compromise": "On a 7-9, you successfully cast the spell, but (pick one)...<br>• The effect isn’t as powerful as it should be.<br>• The effect doesn’t last as long as it should.<br>• You attract unwanted attention.",
-        "failure": "On a 6-, mark a point of Experience. You fail to cast the spell, and the Narrator may tell you a Serious Consequence that happens as a result."
-      },
-      "pojedynek": {
-        "name": "DUEL",
-        "success": "On a 10+, your spell hits the other witch/wizard, and their spell misses!",
-        "compromise": "On a 7-9, pick one:<br>•  Your spells collide in midair!<br>• Your spell misses, but so does theirs!<br>• Both spells hit!",
-        "failure": "On a 6-, mark a point of Experience. Your spell misses, and their spell hits! The Narrator tells you a Serious Consequence that happens to you as a result."
-      },
-      "uwarz-eliksir": {
-        "name": "CONCOCT A POTION",
-        "success": "On a 10+, you correctly create the potion you wanted.",
-        "compromise": "On a 7-9, you create the potion, but (pick one)...<br>• It has some unintended side effect.<br>• The process goes wonky and you take a Condition.<br>• You accidentally make a different potion (the Narrator tells you which one).",
-        "failure": "On a 6-, mark a point of Experience. You don’t create the potion successfully, and the Narrator may tell you a Serious Consequence that happens as a result."
-      },
-      "uzyj-obiektu": {
-        "name": "USE A MAGICAL OBJECT",
-        "success": "On a 10+, the object works exactly as expected and you make full use of it.",
-        "compromise": "On a 7-9, pick one:<br>• The object does something unexpected but helpful.<br>• The object’s effect isn’t as powerful as it should be.<br>• The object works as expected, but you take a Condition from using it.<br>• The object works, but it breaks in the process.",
-        "failure": "On a 6-, mark a point of Experience. The magical object doesn’t work correctly, and the Narrator may tell you a Serious Consequence that happens as a result."
-      }
+  "MOVES": {
+    "stan-w-obliczu": {
+      "name": "STAND IN THE FACE OF DANGER",
+      "success": "On a 10+, pick one:<br>• You stand firm and nobody gets hurt.<br>• You aren’t hurt, and you hurt the threat right back.",
+      "compromise": "On a 7-9, pick one:<br>• You hurt the threat, but it hurts you as well.<br>• You aren’t able to act, but the threat backs off.<br>• You flee, but you don’t suffer any Serious Consequences.<br>• You avoid Serious Consequences, but someone else suffers them instead.",
+      "failure": "On a 6-, mark a point of Experience. You aren’t able to face the danger, and the Narrator may tell you a Serious Consequence that happens as a result."
+    },
+    "zdobadz-czego-szukasz": {
+      "name": "GET WHAT YOU SEEK",
+      "success": "On a 10+, you get what you wanted, no problem.",
+      "compromise": "On a 7-9, you get what you wanted, but (pick one)...<br>• The person you got it from is suspicious.<br>• You must give or promise something in return.<br>• The person you got it from changes their attitude towards you.",
+      "failure": "On a 6-, mark a point of Experience. You don’t get what you wanted, and the Narrator may tell you a Serious Consequence that happens as a result."
+    },
+    "pomoz-lub-przeszkodz": {
+      "name": "HELP OR HINDER SOMEONE",
+      "success": "<b>FOR OTHER MAIN CHARACTERS</b><br>On a 10+, pick one:<br>• Give them +/-1 to their roll.<br>• Prevent them from taking a Condition.<br>• Offer them 1 Experience to stop what they’re doing.<br><br><b>FOR NARRATOR CHARACTERS</b><br>On a 10+, you help or hinder them as you want. ",
+      "compromise": "<b>FOR OTHER MAIN CHARACTERS</b><br>On a 7-9, pick one of the above options, but take a Condition as a result of your efforts. <br><br><b>FOR NARRATOR CHARACTERS</b><br>On a 7-9, you help or hinder them, but (pick one)...<br>• You take a Condition in the process.<br>• They’re accidentally hurt in the process.<br>• They are upset with you for doing so.<br>• They are suspicious of your motives.",
+      "failure": "<b>FOR OTHER PLAYER CHARACTERS</b><br>On a 6-, mark an Experience point. You cannot help or hinder them, and the GM may describe serious consequences that result.<br><br><b>FOR NON-PLAYER CHARACTERS (GM)</b><br>On a 6-, mark an Experience point. You cannot help or hinder them, and the GM may describe serious consequences that result."
+    },
+    "zbliz-sie-stworzenie": {
+      "name": "APPROACH A MAGICAL CREATURE",
+      "success": "On a 10+, the creature acts as you want.",
+      "compromise": "On a 7-9, pick one:<br>• The creature acts as you want, but you take a Condition for your efforts.<br>• The creature acts as you want, but it attracts unwanted attention.<br>• The creature doesn't act as you want, but it does something else helpful.",
+      "failure": "On a 6-, mark a point of Experience. The creature goes wild, and the Narrator may tell you a Serious Consequence that happens as a result."
+    },
+    "ukryj-sie": {
+      "name": "HIDE & SNEAK",
+      "success": "On a 10+, you or whatever you’re hiding aren’t detected. ",
+      "compromise": "On a 7-9, pick one:<br>• Someone or something is looking for you or what you’ve hidden.<br>• Someone or something knows you’re here or that you’ve hidden something, but not where.<br>•  You leave some kind of trace or evidence behind.",
+      "failure": "On a 6-, mark a point of Experience. You or whatever you’re hiding are found, and the Narrator may tell you a Serious Consequence that happens as a result."
+    },
+    "zdobadz-wiedze": {
+      "name": "GAIN KNOWLEDGE",
+      "success": "On a 10+, you gain the knowledge you wanted. You may ask the Narrator a question and they must give a true answer.<br>You might ask:<br>• What here isn’t what it seems to be?<br>•  Where is the thing I’m looking for?<br>• What’s the history of this?<br>• How do I make this useful?<br>• Are they telling the truth?<br>• What do they really want?<br>• What do I remember about this?",
+      "compromise": "On a 7-9, you get some of the knowledge you wanted. You may ask the Narrator a question. They must give you a true answer, but they don’t have to give you a full answer.<br>You might ask:<br>• What here isn’t what it seems to be?<br>•  Where is the thing I’m looking for?<br>• What’s the history of this?<br>• How do I make this useful?<br>• Are they telling the truth?<br>• What do they really want?<br>• What do I remember about this?",
+      "failure": "On a 6-, mark a point of Experience. You’re not sure if you got the knowledge you wanted. You may ask the Narrator a question, but they don’t have to give you a full answer, or a true one. The Narrator may also tell you a Serious Consequence that happens as a result."
+    },
+    "rzuc-zaklecie": {
+      "name": "CAST A SPELL",
+      "success": "On a 10+, you successfully cast the spell the way you wanted.",
+      "compromise": "On a 7-9, you successfully cast the spell, but (pick one)...<br>• The effect isn’t as powerful as it should be.<br>• The effect doesn’t last as long as it should.<br>• You attract unwanted attention.",
+      "failure": "On a 6-, mark a point of Experience. You fail to cast the spell, and the Narrator may tell you a Serious Consequence that happens as a result."
+    },
+    "pojedynek": {
+      "name": "DUEL",
+      "success": "On a 10+, your spell hits the other witch/wizard, and their spell misses!",
+      "compromise": "On a 7-9, pick one:<br>•  Your spells collide in midair!<br>• Your spell misses, but so does theirs!<br>• Both spells hit!",
+      "failure": "On a 6-, mark a point of Experience. Your spell misses, and their spell hits! The Narrator tells you a Serious Consequence that happens to you as a result."
+    },
+    "uwarz-eliksir": {
+      "name": "CONCOCT A POTION",
+      "success": "On a 10+, you correctly create the potion you wanted.",
+      "compromise": "On a 7-9, you create the potion, but (pick one)...<br>• It has some unintended side effect.<br>• The process goes wonky and you take a Condition.<br>• You accidentally make a different potion (the Narrator tells you which one).",
+      "failure": "On a 6-, mark a point of Experience. You don’t create the potion successfully, and the Narrator may tell you a Serious Consequence that happens as a result."
+    },
+    "uzyj-obiektu": {
+      "name": "USE A MAGICAL OBJECT",
+      "success": "On a 10+, the object works exactly as expected and you make full use of it.",
+      "compromise": "On a 7-9, pick one:<br>• The object does something unexpected but helpful.<br>• The object’s effect isn’t as powerful as it should be.<br>• The object works as expected, but you take a Condition from using it.<br>• The object works, but it breaks in the process.",
+      "failure": "On a 6-, mark a point of Experience. The magical object doesn’t work correctly, and the Narrator may tell you a Serious Consequence that happens as a result."
+    },
+    "mecz-quidditcha": {
+      "name": "PLAY A QUIDDITCH MATCH",
+      "success": "On a 10+, you keep control of the match and your team scores 10 points!",
+      "compromise": "On a 7-9, neither team scores and you pass control of the match to the person to your left. Your team doesn’t get a goal because (pick one)...<br>• Someone on your team misses a throw or a catch!<br>• Someone on your team is hit by a Bludger!<br>• Your team’s play doesn’t go as planned!<br>• The other team pulls a trick play!",
+      "failure": "On a 6-, mark a point of Experience and pass control to the person to your left. Your team doesn’t score, and the Narrator describes how the other team scores 10 points. They may also tell you a Serious Consequence that occurs as a result of your attempt."
+    },
+    "zloty-znicz": {
+      "name": "CATCH THE GOLDEN SNITCH",
+      "success": "On a 10+, you do it! Your team catches the Golden Snitch and ends the match, giving your team 150 points.",
+      "compromise": "On a 7-9, your team isn’t able to catch the Golden Snitch, but neither is the other team. Pass control of the match to the person to your left.",
+      "failure": "On a 6-, mark a point of Experience. Your team fails to catch the Golden Snitch, and the other team gets it for 150 points. The Narrator may also tell you a Serious Consequence that occurs as a result of your attempt."
     }
   }
-
+}

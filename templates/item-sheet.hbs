@@ -1,0 +1,10 @@
+<form class="hogwart-item-sheet" autocomplete="off">
+    <header class="hg-item-naglowek">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" width="64" height="64" />
+        <input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'HOGWART.Glowna.Name'}}" />
+    </header>
+    <div class="form-group stacked">
+        <label>{{localize 'HOGWART.UI.Description'}}</label>
+        <textarea name="system.opis" rows="10">{{system.opis}}</textarea>
+    </div>
+</form>

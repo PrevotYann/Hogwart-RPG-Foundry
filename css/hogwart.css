@@ -1262,3 +1262,134 @@ select.select-przeklety {
         box-shadow: 0 0 8px rgba(55, 46, 41, 0.5);
         outline: none;
     }
+
+/* --- v2.0.0: automatisations --- */
+.hogwart-custom-sheet .hg-przycisk {
+    display: block;
+    width: 100%;
+    margin: 6px 0 0 0;
+    padding: 4px 8px;
+    background: #2b2b2b;
+    color: #fff;
+    border: 1px solid #7a0303;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .hogwart-custom-sheet .hg-przycisk:hover {
+        background: #7a0303;
+    }
+
+    .hogwart-custom-sheet .hg-przycisk.hg-nieaktywny {
+        opacity: 0.45;
+    }
+
+.hg-quidditch-sekcja {
+    margin-top: 12px;
+}
+
+.hg-lista-przedmiotow {
+    list-style: none;
+    margin: 8px 0 0 0;
+    padding: 0;
+}
+
+    .hg-lista-przedmiotow li {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 2px 0;
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+        color: #fff;
+    }
+
+        .hg-lista-przedmiotow li img {
+            border: none;
+            flex: 0 0 24px;
+        }
+
+        .hg-lista-przedmiotow li .item-use {
+            flex: 1;
+            cursor: pointer;
+        }
+
+.hg-przedmioty-stopka {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+    color: #ccc;
+    font-size: 11px;
+}
+
+    .hg-przedmioty-stopka .item-create {
+        color: #fff;
+        cursor: pointer;
+    }
+
+.hg-zaklecia-pomoc {
+    font-size: 12px;
+    font-style: italic;
+    opacity: 0.8;
+    margin: 0 0 8px 0;
+}
+
+a.nazwa-zaklecia.hg-zaklecie-rzut {
+    cursor: pointer;
+}
+
+    a.nazwa-zaklecia.hg-zaklecie-rzut:hover {
+        text-decoration: underline;
+        text-shadow: 0 0 6px #d4af37;
+    }
+
+.narrator-sheet .hg-narrator-narzedzia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 6px 0;
+}
+
+    .narrator-sheet .hg-narrator-narzedzia button {
+        flex: 1 1 45%;
+        cursor: pointer;
+    }
+
+.narrator-sheet .past-winner-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+    .narrator-sheet .past-winner-box input {
+        flex: 1;
+    }
+
+    .narrator-sheet .past-winner-box .hg-zwyciezca {
+        flex: 0 0 auto;
+        width: auto;
+        cursor: pointer;
+    }
+
+.hogwart-item-sheet {
+    padding: 8px;
+}
+
+    .hogwart-item-sheet .hg-item-naglowek {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+        .hogwart-item-sheet .hg-item-naglowek input {
+            font-size: 1.4em;
+            flex: 1;
+        }
+
+    .hogwart-item-sheet textarea {
+        width: 100%;
+        min-height: 220px;
+    }

@@ -6,6 +6,11 @@
                 <input type="text" name="system.rok" value="{{system.rok}}" placeholder="{{localize 'HOGWART.Narrator.RokPlaceholder'}}">
             </div>
 
+            <div class="block hg-narrator-narzedzia">
+                <button type="button" class="hg-koniec-sesji">📜 {{localize "HOGWART.UI.EndSession"}}</button>
+                <button type="button" class="hg-koniec-roku">🎓 {{localize "HOGWART.UI.EndYear"}}</button>
+            </div>
+
             <div class="block">
                 <h3>👈 {{localize "HOGWART.Narrator.GlownePostacie"}} 👉</h3>
                 <div class="row-header main-pc-grid">
@@ -43,9 +48,15 @@
                     </div>
                 </div>
 
+                <div class="hg-narrator-narzedzia">
+                    <button type="button" class="hg-punkty">⏳ {{localize "HOGWART.UI.HousePoints"}}</button>
+                    <button type="button" class="hg-punkty-start">🎲 {{localize "HOGWART.UI.StartPoints"}}</button>
+                </div>
+
                 <div class="past-winner-box">
                     <label><strong>🏆 {{localize "HOGWART.Narrator.ZwyciezcaZeszloroczny"}}</strong></label>
                     <input type="text" name="system.zeszlorocznyZwyciezca" value="{{system.zeszlorocznyZwyciezca}}" placeholder="{{localize 'HOGWART.Narrator.ZwyciezcaPlaceholder'}}">
+                    <button type="button" class="hg-zwyciezca" title="{{localize 'HOGWART.UI.RollWinner'}}">🎲</button>
                 </div>
             </div>
 

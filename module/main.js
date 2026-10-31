@@ -1,12 +1,15 @@
 import { HogwartNarratorSheet } from "./narrator-sheet.js";
-import { wykonajRzutCechy } from "./dice.js";
+import { wykonajRzutCechy, rzucZaklecie, uzyjPrzedmiotu, rzutQuidditch, rzutOpuszczenia, uzyjSzczescia, wszystkieStany, ogloszenieOpuszczenia, SYSTEM_ID } from "./dice.js";
 import { inicjalizujSceneStartowa } from "./sceneManager.js";
-import { setupPDFCompendium } from "./compendium.js";
 import { wykonajRuch } from "./moves.js";
+import { przygotujZaklecia } from "./spells.js";
+
+const { ActorSheet, ItemSheet } = foundry.appv1.sheets;
+const { DocumentSheetConfig } = foundry.applications.apps;
 
 export class HogwartActorSheet extends ActorSheet {
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["hogwart", "sheet", "actor", "hogwart-actor-sheet", "hogwart-custom-sheet"],
             template: "systems/systemHogwartRPG/templates/actor-sheet.hbs",
             width: 950,
@@ -35,11 +38,14 @@ export class HogwartActorSheet extends ActorSheet {
             }
         }
 
+        context.kartaZaklec = przygotujZaklecia(context.system.zaklecia || {});
+        context.wszystkieStany = wszystkieStany(this.actor);
+
         context.system.domySelected = {
-            "gryffindor": "Gryffindor",
-            "slytherin": "Slytherin",
-            "ravenclaw": "Ravenclaw",
-            "hufflepuff": "Hufflepuff"
+            "gryffindor": game.i18n.localize("HOGWART.Narrator.Gryffindor"),
+            "slytherin": game.i18n.localize("HOGWART.Narrator.Slytherin"),
+            "ravenclaw": game.i18n.localize("HOGWART.Narrator.Ravenclaw"),
+            "hufflepuff": game.i18n.localize("HOGWART.Narrator.Hufflepuff")
         };
         context.system.lataSelected = {
             "1": game.i18n.localize("HOGWART.Glowna.1"),
@@ -68,10 +74,16 @@ export class HogwartActorSheet extends ActorSheet {
             this.element.addClass(wybranyDom.toLowerCase());
         }
 
+        if (!this.isEditable) return;
+
         html.find('.rollable').click(this._onRoll.bind(this));
+        html.find('.hg-zaklecie-rzut').click(this._onSpell.bind(this));
+        html.find('.hg-quidditch').click(this._onQuidditch.bind(this));
+        html.find('.hg-opusc').click(() => rzutOpuszczenia(this.actor));
         html.find('.item-create').click(this._onItemCreate.bind(this));
         html.find('.item-edit').click(this._onItemEdit.bind(this));
         html.find('.item-delete').click(this._onItemDelete.bind(this));
+        html.find('.item-use').click(this._onItemUse.bind(this));
     }
 
     async _onItemCreate(event) {
@@ -79,7 +91,7 @@ export class HogwartActorSheet extends ActorSheet {
         const header = event.currentTarget;
         const type = header.dataset.type || "przedmiot";
         const itemData = {
-            name: `Nowy ${type}`,
+            name: game.i18n.localize("HOGWART.UI.NewItem"),
             type: type,
             system: {}
         };
@@ -101,66 +113,130 @@ export class HogwartActorSheet extends ActorSheet {
         li.slideUp(200, () => this.render(false));
     }
 
+    async _onItemUse(event) {
+        event.preventDefault();
+        const li = $(event.currentTarget).parents(".item");
+        const item = this.actor.items.get(li.data("itemId"));
+        if (item) await uzyjPrzedmiotu(this.actor, item);
+    }
+
     async _onRoll(event) {
         event.preventDefault();
-        const element = event.currentTarget;
-        const dataset = element.dataset;
+        const dataset = event.currentTarget.dataset;
 
         if (dataset.roll || dataset.cecha) {
-            const cechaNazwa = dataset.cecha;
-            await wykonajRzutCechy(this.actor, cechaNazwa);
+            await wykonajRzutCechy(this.actor, dataset.cecha, { pominDialog: event.shiftKey });
         }
     }
+
+    async _onSpell(event) {
+        event.preventDefault();
+        const id = event.currentTarget.dataset.zaklecie;
+        await rzucZaklecie(this.actor, id, { wymusRzut: event.shiftKey });
+    }
+
+    async _onQuidditch(event) {
+        event.preventDefault();
+        await rzutQuidditch(this.actor, event.currentTarget.dataset.ruch);
+    }
 }
+
+
+export class HogwartItemSheet extends ItemSheet {
+    static get defaultOptions() {
+        return foundry.utils.mergeObject(super.defaultOptions, {
+            classes: ["hogwart", "sheet", "item"],
+            template: "systems/systemHogwartRPG/templates/item-sheet.hbs",
+            width: 480,
+            height: 420
+        });
+    }
+
+    getData() {
+        const context = super.getData();
+        context.system = this.item.toObject(false).system || {};
+        return context;
+    }
+}
+
 
 // Inicjalizacja Foundry
 Hooks.once("init", async function () {
     console.log("Hogwart System | Rejestracja arkuszy i inicjalizacja...");
 
-    Actors.unregisterSheet("core", ActorSheet);
-
-    Actors.registerSheet("systemHogwartRPG", HogwartActorSheet, {
-        types: ["character"],
-        makeDefault: true,
-        label: "Karta Postaci"
-    });
-
-    if (typeof HogwartNarratorSheet !== "undefined") {
-        Actors.registerSheet("systemHogwartRPG", HogwartNarratorSheet, {
-            types: ["narrator"],
-            makeDefault: true,
-            label: "Panel Narratora"
-        });
+    try {
+        DocumentSheetConfig.unregisterSheet(Actor, "core", ActorSheet);
+    } catch (err) {
+        console.warn("Hogwart System |", err);
     }
 
-    await loadTemplates([
+    DocumentSheetConfig.registerSheet(Actor, SYSTEM_ID, HogwartActorSheet, {
+        types: ["character"],
+        makeDefault: true,
+        label: "HOGWART.UI.SheetCharacter"
+    });
+
+    DocumentSheetConfig.registerSheet(Actor, SYSTEM_ID, HogwartNarratorSheet, {
+        types: ["narrator"],
+        makeDefault: true,
+        label: "HOGWART.UI.SheetNarrator"
+    });
+
+    DocumentSheetConfig.registerSheet(Item, SYSTEM_ID, HogwartItemSheet, {
+        types: ["przedmiot", "zaklecie"],
+        makeDefault: true,
+        label: "HOGWART.UI.SheetItem"
+    });
+
+    await foundry.applications.handlebars.loadTemplates([
         "systems/systemHogwartRPG/templates/actor-history.hbs"
     ]);
 });
 
 Hooks.once("ready", async function () {
-    if (typeof inicjalizujSceneStartowa === "function") {
-        await inicjalizujSceneStartowa();
-    }
-
-    if (typeof setupPDFCompendium === "function") {
-        await setupPDFCompendium();
-    }
+    await inicjalizujSceneStartowa();
 });
 
-Hooks.on("renderChatMessage", (message, html) => {
-    const root = html instanceof jQuery ? html : $(html);
-
-    root.find('.btn-moj-ruch').off('click').on('click', async event => {
+Hooks.on("renderChatMessageHTML", (message, html) => {
+    html.querySelectorAll(".btn-moj-ruch").forEach(btn => btn.addEventListener("click", async event => {
         event.preventDefault();
-        const btn = $(event.currentTarget);
-        const ruchId = btn.attr('data-ruch-id');
-        const wynik = btn.attr('data-wynik');
+        const ruchId = btn.dataset.ruchId;
+        const wynik = btn.dataset.wynik;
 
         let actor = game.user.character
             || canvas.tokens?.controlled[0]?.actor
             || (message.speaker?.actor ? game.actors.get(message.speaker.actor) : null);
 
         await wykonajRuch(ruchId, actor, wynik);
+    }));
+
+    html.querySelectorAll(".hg-szczescie").forEach(btn => {
+        if (message.getFlag(SYSTEM_ID, "rzut")?.szczescieUzyte) {
+            btn.disabled = true;
+            return;
+        }
+        btn.addEventListener("click", async event => {
+            event.preventDefault();
+            btn.disabled = true;
+            await uzyjSzczescia(message);
+        });
     });
+
+    html.querySelectorAll(".hg-opusc").forEach(btn => btn.addEventListener("click", async event => {
+        event.preventDefault();
+        const actor = game.actors.get(btn.dataset.actorId);
+        if (!actor?.isOwner) {
+            ui.notifications.warn(game.i18n.localize("HOGWART.UI.NotOwner"));
+            return;
+        }
+        await rzutOpuszczenia(actor);
+    }));
+});
+
+// Gdy zaznaczono ostatni (8.) Stan: zaproponuj rzut na opuszczenie historii
+Hooks.on("updateActor", (actor, changed, options, userId) => {
+    if (userId !== game.user.id || actor.type !== "character") return;
+    const zmienioneStany = Object.entries(changed.system || {}).filter(([k, v]) => k.startsWith("stan") && v === true);
+    if (zmienioneStany.length === 0) return;
+    if (wszystkieStany(actor)) ogloszenieOpuszczenia(actor);
 });

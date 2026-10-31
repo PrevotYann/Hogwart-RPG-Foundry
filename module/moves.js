@@ -9,7 +9,10 @@ const RUCHY_CONFIG = {
     "rzuc-zaklecie": { cecha: "magia" },
     "pojedynek": { cecha: "magia" },
     "uwarz-eliksir": { cecha: "magia" },
-    "uzyj-obiektu": { cecha: "magia" }
+    "uzyj-obiektu": { cecha: "magia" },
+    // Ruchy Quidditcha - nie pojawiają się po zwykłym rzucie na cechę
+    "mecz-quidditcha": { cecha: ["odwaga", "spryt", "intelekt", "lojalnosc"], quidditch: true },
+    "zloty-znicz": { cecha: ["odwaga", "spryt", "intelekt", "lojalnosc"], quidditch: true }
 };
 
 
@@ -21,6 +24,8 @@ const CECHY_MAP = {
     "magia": "Magia"
 };
 
+export const CECHY = Object.keys(CECHY_MAP);
+
 
 export const BAZA_RUCHOW = new Proxy({}, {
     get(target, prop) {
@@ -28,6 +33,7 @@ export const BAZA_RUCHOW = new Proxy({}, {
         const config = RUCHY_CONFIG[prop];
         return {
             cecha: config.cecha,
+            quidditch: !!config.quidditch,
             nazwa: game.i18n.localize(`MOVES.${prop}.name`),
             sukces: game.i18n.localize(`MOVES.${prop}.success`),
             kompromis: game.i18n.localize(`MOVES.${prop}.compromise`),
@@ -52,58 +58,11 @@ export function pobierzNazweCechy(cechaKlucz) {
 }
 
 
-export async function rzutNaCeche(actor, cechaKlucz) {
-    const cecha = (cechaKlucz || "").toLowerCase().trim();
-    const przetlumaczonaCecha = pobierzNazweCechy(cecha).toUpperCase();
-    const txtRzutNaCeche = game.i18n.localize("HOGWART.Roll.TraitRoll");
-
-    const mod = actor.system?.stats?.[cecha]?.value || 0;
-    const roll = new Roll(`2d6 + ${mod}`);
-    await roll.evaluate();
-
-    let labelWynik = "";
-    let opisWynik = "";
-    let colorStyle = "";
-
-    if (roll.total >= 10) {
-        labelWynik = game.i18n.localize("HOGWART.Roll.Success");
-        opisWynik = game.i18n.localize("HOGWART.Roll.SuccessDesc");
-        colorStyle = "border-left: 4px solid #27ae60; background: rgba(39, 174, 96, 0.15); color: #27ae60;";
-    } else if (roll.total >= 7) {
-        labelWynik = game.i18n.localize("HOGWART.Roll.Partial");
-        opisWynik = game.i18n.localize("HOGWART.Roll.PartialDesc");
-        colorStyle = "border-left: 4px solid #d35400; background: rgba(211, 84, 0, 0.15); color: #d35400;";
-    } else {
-        labelWynik = game.i18n.localize("HOGWART.Roll.Failure");
-        opisWynik = game.i18n.localize("HOGWART.Roll.FailureDesc");
-        colorStyle = "border-left: 4px solid #c0392b; background: rgba(192, 57, 43, 0.15); color: #c0392b;";
-    }
-
-    //html
-    const htmlRuchy = await generujHtmlRuchow(actor, cecha, roll.total);
-
-    //cała wiadomość 2
-    const content = `
-        <div class="hogwart-roll-card">
-            <p style="margin: 0 0 6px 0;"><strong>${txtRzutNaCeche}</strong> ${przetlumaczonaCecha}</p>
-            <div style="padding: 8px; margin-bottom: 8px; ${colorStyle}">
-                <strong style="font-size: 1.1em;">${labelWynik}</strong>
-                <p style="margin: 4px 0 0 0; font-size: 0.9em; color: #222;">${opisWynik}</p>
-            </div>
-            ${htmlRuchy}
-        </div>
-    `;
-
-    await roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: actor }),
-        content: content
-    });
-}
-
 export async function generujHtmlRuchow(actor, cechaKlucz, wynikRzutu) {
     const cecha = (cechaKlucz || "").toLowerCase().trim();
 
     const pasujaceRuchy = Object.entries(BAZA_RUCHOW).filter(([id, move]) => {
+        if (move.quidditch) return false;
         if (Array.isArray(move.cecha)) {
             return move.cecha.includes(cecha);
         }
@@ -121,7 +80,7 @@ export async function generujHtmlRuchow(actor, cechaKlucz, wynikRzutu) {
     pasujaceRuchy.forEach(([id, ruch]) => {
         html += `
             <div style="margin-bottom: 6px;">
-                <button class="btn-moj-ruch" data-ruch-id="${id}" data-wynik="${wynikRzutu}" style="width: 100%; text-align: left; padding: 6px 8px; cursor: pointer; background: #2b2b2b; color: #fff; border: 1px solid #7a0303; border-radius: 3px; font-weight: bold;">
+                <button type="button" class="btn-moj-ruch" data-ruch-id="${id}" data-wynik="${wynikRzutu}" style="width: 100%; text-align: left; padding: 6px 8px; cursor: pointer; background: #2b2b2b; color: #fff; border: 1px solid #7a0303; border-radius: 3px; font-weight: bold;">
                     📖 ${ruch.nazwa}
                 </button>
             </div>
@@ -133,11 +92,11 @@ export async function generujHtmlRuchow(actor, cechaKlucz, wynikRzutu) {
     return html;
 }
 
-export async function wykonajRuch(ruchId, actorInput, wynikRzutu) {
+// Wynik ruchu dla danego rezultatu (lub wszystkie trzy wyniki, gdy brak rezultatu)
+export function wynikRuchuHtml(ruchId, wynikRzutu) {
     const ruch = BAZA_RUCHOW[ruchId];
-    if (!ruch) return;
+    if (!ruch) return "";
 
-    const actor = actorInput?.actor || actorInput;
     const total = Number(wynikRzutu);
 
     const txtSuccess = game.i18n.localize("HOGWART.Roll.Success");
@@ -168,7 +127,14 @@ export async function wykonajRuch(ruchId, actorInput, wynikRzutu) {
     }
 
     html += `</div>`;
+    return html;
+}
 
+export async function wykonajRuch(ruchId, actorInput, wynikRzutu) {
+    const html = wynikRuchuHtml(ruchId, wynikRzutu);
+    if (!html) return;
+
+    const actor = actorInput?.actor || actorInput;
     const speakerData = actor ? ChatMessage.getSpeaker({ actor: actor }) : ChatMessage.getSpeaker();
 
     await ChatMessage.create({

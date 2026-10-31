@@ -4,11 +4,11 @@ export async function inicjalizujSceneStartowa() {
     if (game.user.isGM && game.scenes.size === 0) {
 
         const sceneData = {
-            name: "Pokój Wspólny (Start)",
+            name: game.i18n.localize("HOGWART.UI.SceneName"),
             img: "systems/systemHogwartRPG/assets/scena-startowa.webp",
             active: true,            
             navigation: true,        
-            navName: "Strona Startowa",
+            navName: game.i18n.localize("HOGWART.UI.SceneNav"),
             grid: {
                 type: 0                
             },

@@ -7,7 +7,9 @@
       "spryt": 0,
       "lojalnosc": 0,
       "intelekt": 0,
-      "magia": 0
+      "magia": 0,
+      "rokNauki": "1",
+      "zaklecia": {}
     },
     "narrator": {
       "rok": "1",
@@ -101,6 +103,13 @@
     }
   },
   "Item": {
-    "types": [ "przedmiot", "zaklecie" ]
+    "types": [ "przedmiot", "zaklecie" ],
+    "przedmiot": {
+      "opis": ""
+    },
+    "zaklecie": {
+      "opis": "",
+      "rok": 1
+    }
   }
 }

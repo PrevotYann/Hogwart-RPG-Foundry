@@ -2,9 +2,9 @@
   "id": "systemHogwartRPG",
   "title": "Hogwart RPG",
   "description": "Foundry system for Hogwarts RPG, powered by the PBTA engine. Available in English, Polish and French. The system and mechanics were designed by David Brunell-Brutman.",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "compatibility": {
-    "minimum": "11",
+    "minimum": "13",
     "verified": "14",
     "maximum": "14"
   },
@@ -48,9 +48,47 @@
       "zaklecie": {}
     }
   },
+  "packs": [
+    {
+      "name": "regles-fr",
+      "label": "Règles (FR)",
+      "path": "packs/regles-fr",
+      "type": "JournalEntry",
+      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" }
+    },
+    {
+      "name": "livres-pdf",
+      "label": "Livres de règles / Rulebooks (PDF)",
+      "path": "packs/livres-pdf",
+      "type": "JournalEntry",
+      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" }
+    },
+    {
+      "name": "objets-magiques-fr",
+      "label": "Objets magiques (FR)",
+      "path": "packs/objets-magiques-fr",
+      "type": "Item",
+      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" }
+    },
+    {
+      "name": "tables-fr",
+      "label": "Tables aléatoires (FR)",
+      "path": "packs/tables-fr",
+      "type": "RollTable",
+      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Hogwarts RPG",
+      "sorting": "m",
+      "color": "#7a0303",
+      "packs": ["regles-fr", "livres-pdf", "objets-magiques-fr", "tables-fr"]
+    }
+  ],
   "url": "https://github.com/PrevotYann/Hogwart-RPG-Foundry",
   "manifest": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/releases/latest/download/system.json",
-  "download": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/releases/download/v1.1.0/system.zip",
+  "download": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/releases/download/v2.0.0/system.zip",
   "readme": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/blob/main/README.md",
   "bugs": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/issues"
 }

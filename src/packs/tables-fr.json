@@ -1,0 +1,234 @@
+[
+  {
+    "name": "Création 1 – Peau",
+    "formula": "1d6",
+    "description": "Crée ta sorcière / ton sorcier I – Quelle est ton apparence ?",
+    "results": ["Foncée", "Taches de rousseur", "Mate", "Pâle", "Rougeâtre", "Hâlée"]
+  },
+  {
+    "name": "Création 1 – Cheveux",
+    "formula": "1d6",
+    "description": "Crée ta sorcière / ton sorcier I – Quelle est ton apparence ?",
+    "results": ["Noirs", "Blonds", "Châtains", "Couverts", "Teints", "Roux"]
+  },
+  {
+    "name": "Création 1 – Silhouette",
+    "formula": "1d6",
+    "description": "Crée ta sorcière / ton sorcier I – Quelle est ton apparence ?",
+    "results": ["Athlétique", "Corpulente", "Petite", "Robuste", "Grande", "Mince"]
+  },
+  {
+    "name": "Création 3 – Ambition / Bois de baguette",
+    "formula": "1d6",
+    "description": "Ton ambition est ce que tu attends de ton séjour à Poudlard. Certains bois de baguette fonctionnent mieux pour les sorcières et sorciers avec des ambitions particulières.",
+    "results": ["Réussite – Érable", "Connaissance – Noyer", "Amusement – Épicéa", "Amitié – Cèdre", "Pouvoir – If", "Statut – Orme"]
+  },
+  {
+    "name": "Création 3 – Type de baguette",
+    "formula": "1d6",
+    "description": "Tu peux également choisir le type de ta baguette.",
+    "results": ["Flexible", "Longue", "Ornée", "Ordinaire", "D’occasion", "Courte"]
+  },
+  {
+    "name": "Création 3 – Cœur de baguette",
+    "formula": "1d6",
+    "description": "Cœur de la baguette (d’après la version originale : Dragon / Phénix / Licorne).",
+    "results": [[[1, 2], "Ventricule de dragon"], [[3, 4], "Plume de phénix"], [[5, 6], "Crin de licorne"]]
+  },
+  {
+    "name": "Création 4 – Origine",
+    "formula": "1d6",
+    "description": "Marque ton Expérience de départ sur ta Fiche de Personnage.",
+    "results": [[[1, 2], "Né-moldu (commence avec 1 sort et 3 Expérience)"], [[3, 4], "Sang-mêlé (commence avec 2 sorts et 2 Expérience)"], [[5, 6], "Sang-pur (commence avec 3 sorts et 1 Expérience)"]]
+  },
+  {
+    "name": "Création 5 – Matière préférée : Matières Générales",
+    "formula": "1d6",
+    "description": "Les élèves de 1re ou de 2e année choisissent seulement parmi les Matières Générales. Fais un jet de 2d6 : le premier dé choisit entre Matières Générales (1-3) ou Options (4-6), le deuxième donne la matière.",
+    "results": ["Sortilèges", "Défense contre les Forces du Mal", "Botanique", "Histoire de la Magie", "Potions", "Métamorphose"]
+  },
+  {
+    "name": "Création 5 – Matière préférée : Options",
+    "formula": "1d6",
+    "description": "Les élèves de la 3e à la 7e année peuvent choisir parmi les Matières Générales ou les Options.",
+    "results": ["Arithmancie", "Astronomie", "Soin aux Créatures Magiques", "Divination", "Étude des Moldus", "Quidditch"]
+  },
+  {
+    "name": "Création 9 – Animal de compagnie",
+    "formula": "1d6",
+    "description": "As-tu un animal de compagnie ? (optionnel)",
+    "results": [[[1, 2], "Chouette (peut envoyer et recevoir du courrier)"], [[3, 4], "Rat (ne peut ni envoyer ni recevoir de courrier)"], [[5, 6], "Chat (ne veut ni envoyer ni recevoir de courrier)"]]
+  },
+  {
+    "name": "Création 10 – Dans quelle maison es-tu ?",
+    "formula": "1d4",
+    "description": "Si tu joues un élève de 1re année et que tu commences l’histoire avant le premier jour d’école, attends la Cérémonie de la Répartition. Sinon, lance un d6 (5 ou 6 : relance). Tu peux choisir ta maison entre celle déterminée par le dé, ou celle associée à ton meilleur Trait. Une fois que tu connais ta maison, ajoute +1 à ton Trait associé. Sert aussi à tirer le Vainqueur de l’Année Précédente.",
+    "results": ["Gryffondor (+1 en Courage)", "Serdaigle (+1 en Intelligence)", "Poufsouffle (+1 en Loyauté)", "Serpentard (+1 en Ruse)"]
+  },
+  {
+    "name": "Création 11 – Questions d’amis : Gryffondor",
+    "formula": "1d6",
+    "description": "Lance 2d6 pour choisir deux questions. Pose-les au groupe et note le nom de celui qui te répond dans tes Amis et Rivaux.",
+    "results": [
+      "Lequel d’entre vous ai-je défendu quand des élèves plus âgés s’en prenaient à lui ? (Ami)",
+      "Lequel d’entre vous est allé en retenue avec moi après que nous avons dénoncé un professeur injuste ? (Ami)",
+      "Lequel d’entre vous est mon meilleur partenaire dans l’équipe de Quidditch ? (Ami)",
+      "Lequel d’entre vous est la personne vers qui je me tourne quand j’ai besoin de trouver quelque chose à la bibliothèque ? (Ami)",
+      "Lequel de vous joue au même poste que moi dans l’équipe de Quidditch d’une autre maison ? (Rival)",
+      "Lequel d’entre vous ai-je défié en duel pour avoir insulté un ami ? (Rival)"
+    ]
+  },
+  {
+    "name": "Création 11 – Questions d’amis : Poufsouffle",
+    "formula": "1d6",
+    "description": "Lance 2d6 pour choisir deux questions. Pose-les au groupe et note le nom de celui qui te répond dans tes Amis et Rivaux.",
+    "results": [
+      "Lequel d’entre vous ai-je aidé une fois à retrouver son animal perdu ? (Ami)",
+      "Lequel d’entre vous s’est faufilé dans les cuisines avec moi avant le banquet d’Halloween ? (Ami)",
+      "Lequel d’entre vous aime passer ses après-midis du week-end dans les serres avec moi ? (Ami)",
+      "Lequel d’entre vous s’est assis à côté de moi lors de notre premier voyage dans le Poudlard Express ? (Ami)",
+      "Avec lequel d’entre vous me suis-je disputé parce qu’il a insulté mon animal de compagnie ? (Rival)",
+      "Lequel d’entre vous est-ce que je n’aime pas car il passe trop de temps avec mon meilleur ami ? (Rival)"
+    ]
+  },
+  {
+    "name": "Création 11 – Questions d’amis : Serdaigle",
+    "formula": "1d6",
+    "description": "Lance 2d6 pour choisir deux questions. Pose-les au groupe et note le nom de celui qui te répond dans tes Amis et Rivaux.",
+    "results": [
+      "Lequel d’entre vous est resté éveillé après minuit pour réviser avec moi avant un examen important d’Histoire de la Magie ? (Ami)",
+      "Lequel d’entre vous est-ce que je laisse toujours copier mes devoirs de Sortilèges ? (Ami)",
+      "Lequel d’entre vous partage mon étrange obsession pour une créature magique rare ? (Ami)",
+      "Lequel d’entre vous vais-je voir quand j’ai besoin de savoir quelque chose qu’on ne trouve pas à la bibliothèque ? (Ami)",
+      "Auquel d’entre vous est-ce que j’en veux d’avoir de meilleures notes que moi dans ma matière préférée ? (Rival)",
+      "Lequel d’entre vous m’énerve car il triche pour faire ses devoirs ? (Rival)"
+    ]
+  },
+  {
+    "name": "Création 11 – Questions d’amis : Serpentard",
+    "formula": "1d6",
+    "description": "Lance 2d6 pour choisir deux questions. Pose-les au groupe et note le nom de celui qui te répond dans tes Amis et Rivaux.",
+    "results": [
+      "Lequel d’entre vous a découvert une pièce inconnue dans le château avec moi ? (Ami)",
+      "Lequel d’entre vous m’est redevable de ne pas l’avoir dénoncé pour être sorti en cachette après le couvre-feu ? (Ami)",
+      "Lequel d’entre vous est toujours assis avec moi pendant les repas ? (Ami)",
+      "Lequel d’entre vous vient d’une famille qui est proche de la mienne depuis des générations ? (Ami)",
+      "Lequel d’entre vous est selon moi, un gros frimeur ? (Rival)",
+      "Lequel d’entre vous met en doute mes compétences académiques ou sportives en public ? (Rival)"
+    ]
+  },
+  {
+    "name": "Création 12 – Patronus : genre d’animal",
+    "formula": "1d6",
+    "description": "Pour découvrir ton Patronus, lance 2d6. Le premier résultat indique le genre d’animal, le deuxième résultat est le Patronus. Tu ne pourras lancer le sortilège du Patronus qu’une fois que tu l’auras appris, généralement en 5e année.",
+    "results": ["Oiseaux de proie", "Autres oiseaux", "Carnivores", "Herbivores", "Animaux domestiques", "Animaux rares"]
+  },
+  {
+    "name": "Création 12 – Patronus : oiseaux de proie",
+    "formula": "1d6",
+    "results": ["Albatros", "Aigle", "Faucon", "Buse", "Héron", "Balbuzard"]
+  },
+  {
+    "name": "Création 12 – Patronus : autres oiseaux",
+    "formula": "1d6",
+    "results": ["Merle", "Corbeau", "Colibri", "Faisan", "Rouge-gorge", "Moineau"]
+  },
+  {
+    "name": "Création 12 – Patronus : carnivores",
+    "formula": "1d6",
+    "results": ["Blaireau", "Ours", "Sanglier", "Lion", "Serpent", "Loup"]
+  },
+  {
+    "name": "Création 12 – Patronus : herbivores",
+    "formula": "1d6",
+    "results": ["Oryctérope", "Cerf", "Hérisson", "Souris", "Saumon", "Écureuil"]
+  },
+  {
+    "name": "Création 12 – Patronus : animaux domestiques",
+    "formula": "1d6",
+    "results": ["Chat", "Chien", "Cheval", "Lapin", "Rat", "Cygne"]
+  },
+  {
+    "name": "Création 12 – Patronus : animaux rares",
+    "formula": "1d6",
+    "results": ["Dragon", "Hippogriffe", "Chouette", "Phénix", "Licorne", "Cheval ailé"]
+  },
+  {
+    "name": "Noms – Prénoms moldus",
+    "formula": "1d30",
+    "results": ["Ahmad", "Arthur", "Aurora", "Chiwetel", "Cormac", "Daniel", "Dev", "Dimitrios", "Eleni", "Emma", "Fatima", "Gabriela", "Genevieve", "James", "Jing", "Joanne", "Lorenzo", "Maggie", "Nnedi", "Pablo", "Pénélope", "Richard", "Riya", "Rupert", "Scarlett", "Sean", "Susan", "Terry", "Wei", "Zoë"]
+  },
+  {
+    "name": "Noms – Prénoms sorciers",
+    "formula": "1d30",
+    "results": ["Alecto", "Andromeda", "Arabella", "Argus", "Ariana", "Arsenius", "Augusta", "Cubert", "Dedalus", "Eldred", "Elphias", "Emeric", "Emmeline", "Filius", "Griselda", "Helena", "Imelda", "Ludo", "Mafalda", "Mérope", "Norbert", "Phyllida", "Renée", "Rodolphus", "Septima", "Silvanus", "Sybille", "Thorfinn", "Wilbert", "Wilhelmina"]
+  },
+  {
+    "name": "Noms – Noms de famille",
+    "formula": "1d30",
+    "results": ["Adebayo", "Ali", "Tourdesac", "Chowdhry", "Davies", "Diaz", "Dubois", "Finnigan", "Goldstein", "Grint", "Johnson", "Kazinsky", "Khan", "Leung", "Macmillan", "Mwangi", "Ogden", "Okafor", "Patel", "Quinn", "Radcliffe", "Santos", "Schmidt", "Spinnet", "Tarkowski", "Thomas", "Valentini", "Warren", "Watson", "Wong"]
+  },
+  {
+    "name": "Narratrice – Points de départ des maisons",
+    "formula": "1d6",
+    "description": "Points des Personnages-Non-Joueurs : lance 1d6 pour chaque maison au début de l’histoire.",
+    "results": ["250", "275", "300", "325", "350", "375"]
+  },
+  {
+    "name": "Narratrice – Sérieuses Conséquences",
+    "formula": "1d8",
+    "description": "Lorsque quelqu’un obtient 6- à son jet, tu peux jouer une Sérieuse Conséquence. Un jet raté n’implique pas forcément une Sérieuse Conséquence, mais tu dois quand même faire une Action de Narratrice.",
+    "results": [
+      "Donne-lui un État (Effrayé·e, Stressé·e, Jaloux·se, En colère, Embarrassé·e, Blessé·e, Ensorcelé·e, Inconscient·e) qui correspond à ce qui se passe dans l’histoire",
+      "Punis-le (retire des points, donne des retenues, supprime des privilèges, préviens les parents, renvoie temporairement ou définitivement)",
+      "Prends-lui quelque chose",
+      "Blesse une personne qui lui est chère",
+      "Rends la situation impossible",
+      "Change l’attitude de quelqu’un envers lui, négativement",
+      "Révèle son secret",
+      "Laisse son rival gagner"
+    ]
+  },
+  {
+    "name": "Narratrice – Actions générales",
+    "formula": "1d9",
+    "description": "Tes Actions de Narratrice te permettent d’intervenir dans l’histoire et de donner vie au monde. Pas besoin de nommer une Action : décris simplement ce qui se passe.",
+    "results": [
+      "Séparer les personnages",
+      "Les rassembler",
+      "Changer l’attitude de quelqu’un envers eux",
+      "Mettre en danger une chose à laquelle ils tiennent",
+      "Les mettre face à une décision difficile",
+      "Leur offrir une opportunité, avec ou sans prix à payer",
+      "Retourner leur action contre eux",
+      "Poser une question",
+      "Demander « Que faites-vous ? »"
+    ]
+  },
+  {
+    "name": "Le monde magique – Lieux de Poudlard",
+    "formula": "1d25",
+    "results": ["Bibliothèque", "Bureau du directeur", "Bureau du concierge", "Bureaux des professeurs", "Cabane du garde-chasse", "Cachot de Serpentard", "Cachots", "Cuisines", "Forêt interdite", "Grand Lac", "Grande Salle", "Grands Escaliers", "Hangar à bateaux", "Infirmerie", "Salle de bains des préfets", "Salle des professeurs", "Salle sur Demande", "Serres et jardins", "Sous-sols de Poufsouffle", "Terrain de Quidditch", "Toilettes", "Tour d’astronomie", "Tour de Gryffondor", "Tour de Serdaigle", "Volière"]
+  },
+  {
+    "name": "Le monde magique – Pré-au-Lard et Chemin de Traverse",
+    "formula": "1d18",
+    "results": ["Auberge de la Tête du Sanglier", "Boutique de confiserie Honeydukes", "Boutique de vêtements Gaichiffon", "Cabane hurlante", "Gare de Pré-au-Lard", "Magasin de farces et attrapes Zonko", "Pub des Trois Balais", "Salon de thé de Madame Pieddodu", "Allée des Embrumes", "Pub du Chaudron Baveur", "Librairie Fleury & Bott", "Banque Gringotts", "Madame Guipure, prêt-à-porter", "Magasin d’accessoires de Quidditch", "Ménagerie Magique", "Chez Ollivander, fabricants de baguettes magiques", "Slug et Jiggers, Apothicaires", "Weasley, Farces pour sorciers facétieux"]
+  },
+  {
+    "name": "Le monde magique – Événements annuels",
+    "formula": "1d12",
+    "results": ["Poudlard Express", "Cérémonie de Répartition", "Banquet de Bienvenue", "Sélections de l’équipe de Quidditch", "Banquet d’Halloween", "Matchs de Quidditch", "Banquet de Noël", "Bal de Noël", "Vacances de Noël et de Pâques", "Examens de fin d’année (B.U.S.E. et A.S.P.I.C.)", "Banquet de fin d’année", "Vacances d’été"]
+  },
+  {
+    "name": "Le monde magique – Créatures magiques",
+    "formula": "1d32",
+    "results": ["Une Araignée géante", "Un Basilic", "Un Botruc", "Un Centaure", "Un Cheval ailé", "Un Chien à trois têtes", "Un Crabe de feu", "Un Croup", "Un Détraqueur", "Un Doxy", "Un Dragon", "Un Elfe de maison", "Un Épouvantard", "Un Être de l’eau", "Un Fléreur", "Un Géant", "Un Gnome", "Un Gobelin", "Une Goule", "Un Hippogriffe", "Un Kappa", "Un Kelpy", "Une Licorne", "Un Loup-garou", "Un Lutin", "Un Niffleur", "Un Noueux", "Un Phénix", "Un Scroutt à pétards", "Un Sombral", "Un Sphinx", "Un Troll"]
+  },
+  {
+    "name": "Le monde magique – Objets magiques",
+    "formula": "1d25",
+    "description": "Voir aussi le compendium « Objets magiques (FR) ».",
+    "results": ["Baguette farceuse", "Balai volant", "Baskets collantes", "Bézoard", "Bonbons à Hoquet", "Boules puantes", "Cape d’Invisibilité", "Carte enchantée", "Cartes de bataille explosive", "Chandelle éternelle", "Chaudron à touillage automatique", "Chaudron pliable", "Déluminateur", "Glace à l’Ennemi", "Jeu d’échecs version sorcier", "Miroir à double sens", "Multiplettes", "Plume à Papote", "Plume à Réponses Intégrées", "Plume à vérificateur d’orthographe", "Rapeltout", "Retourneur de temps", "Scrutoscope", "Tente magique", "Vêtement ignifuge"]
+  }
+]

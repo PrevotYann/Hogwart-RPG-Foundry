@@ -1,4 +1,14 @@
-﻿{
+{
+  "TYPES": {
+    "Actor": {
+      "character": "Postać główna",
+      "narrator": "Narrator"
+    },
+    "Item": {
+      "przedmiot": "Magiczny przedmiot",
+      "zaklecie": "Zaklęcie"
+    }
+  },
   "HOGWART": {
     "Narrator": {
       "Rok": "ROK:",
@@ -287,6 +297,13 @@
       "op": "Napisz tutaj historię swojej postaci..."
     },
     "Glowna": {
+      "1": "Pierwszy rok",
+      "2": "Drugi rok",
+      "3": "Trzeci rok",
+      "4": "Czwarty rok",
+      "5": "Piąty rok",
+      "6": "Szósty rok",
+      "7": "Siódmy rok",
       "Name": "Imię i nazwisko",
       "Nameo": "Napisz imię...",
       "House": "Dom",
@@ -304,14 +321,7 @@
       "Patronus": "Patronus",
       "Pure": "Czysta krew",
       "Half": "Półkrwi",
-      "Muggleborn": "Mugolak",
-      "1": "Pierwszy rok",
-      "2": "Drugi rok",
-      "3": "Trzeci rok",
-      "4": "Czwarty rok",
-      "5": "Piąty rok",
-      "6": "Szósty rok",
-      "7": "Siódmy rok"
+      "Muggleborn": "Mugolak"
     },
     "Hexed": {
       "Tytul": "Wybierz cechę",
@@ -335,7 +345,87 @@
       "SuccessDesc": "Jest pełny sukces. Jeśli chcesz możesz opisać jak to robisz.",
       "PartialDesc": "Połowiczny sukces. Udaje Ci się, ale ponosisz koszt lub komplikację.",
       "FailureDesc": "Porażka. Zaznacz 1 PD i przygotuj się na konsekwencje."
-
+    },
+    "Quidditch": {
+      "Title": "Quidditch",
+      "Match": {
+        "odwaga": "+Odwaga: Twoja drużyna gra odważnie",
+        "spryt": "+Spryt: Twoja drużyna gra nieuczciwie, nieczysto",
+        "intelekt": "+Intelekt: Twoja drużyna gra taktycznie",
+        "lojalnosc": "+Lojalność: Twoja drużyna gra ze świetną pracą zespołową"
+      },
+      "Snitch": {
+        "odwaga": "+Odwaga: Twój Szukający wykonuje śmiały manewr",
+        "spryt": "+Spryt: Twoja drużyna sabotuje drugiego Szukającego",
+        "intelekt": "+Intelekt: Twoja drużyna przechytrza drugiego Szukającego",
+        "lojalnosc": "+Lojalność: kolega z drużyny pomaga Twojemu Szukającemu"
+      }
+    },
+    "UI": {
+      "SheetCharacter": "Karta Postaci",
+      "SheetNarrator": "Panel Narratora",
+      "SheetItem": "Przedmiot",
+      "SceneName": "Pokój Wspólny (Start)",
+      "SceneNav": "Strona Startowa",
+      "Roll": "Rzuć",
+      "PickApproach": "Jak gra Twoja drużyna?",
+      "FriendOption": "+1: osoba, której pomagasz lub przeszkadzasz, jest Twoim Przyjacielem lub Rywalem",
+      "SubjectOption": "+1: rzut związany z Twoim Ulubionym Przedmiotem",
+      "OtherModifier": "Inny modyfikator",
+      "ShiftHint": "Wskazówka: Shift+klik na cechę rzuca bez tego okna.",
+      "FriendBonus": "Przyjaciel / Rywal",
+      "SubjectBonus": "Ulubiony Przedmiot",
+      "OtherBonus": "Inne",
+      "Unconscious": "Postać {name} jest nieprzytomna i nie może działać!",
+      "XpMarked": "Porażka: zaznaczono punkt Doświadczenia ({n}/4).",
+      "XpFull": "Możesz wybrać Awans, a następnie wyczyścić zaznaczone Doświadczenie!",
+      "XpAlreadyFull": "Wszystkie 4 punkty Doświadczenia są już zaznaczone: wybierz Awans i wyczyść Doświadczenie.",
+      "SpendLuck": "Zaznacz punkt Szczęścia, aby zmienić wynik na 10+",
+      "LuckSpent": "{name} zaznacza punkt Szczęścia: wynik zmienia się na 10+!",
+      "NoLuck": "Brak wolnych punktów Szczęścia.",
+      "LuckAlreadyUsed": "Szczęście zostało już użyte przy tym rzucie.",
+      "NotOwner": "Nie kontrolujesz tej postaci.",
+      "CastTitle": "Rzucanie zaklęcia",
+      "BrewTitle": "Warzenie eliksiru",
+      "UnknownTitle": "Nieznane zaklęcie lub eliksir",
+      "UnknownSpell": "{name} nie zna „{spell}”. Zaznaczyć punkt Szczęścia i spróbować mimo to?",
+      "UnknownNoLuck": "Nie znasz „{spell}” i nie masz już punktów Szczęścia.",
+      "LuckForUnknown": "Zaznaczono punkt Szczęścia: nieznane zaklęcie lub eliksir.",
+      "Mastered": "„{spell}” pochodzi z roku o dwa lub więcej lata niższego: rzucasz je bez rzutu kośćmi, chyba że sytuacja jest stresująca (Shift+klik, aby rzucić).",
+      "SpellsHelp": "Zaznacz znane zaklęcia. Kliknij nazwę, aby je rzucić (lub uwarzyć eliksir): nieznane zaklęcie = 1 punkt Szczęścia; zaklęcie sprzed dwóch lub więcej lat = sukces bez rzutu (Shift+klik, aby rzucić).",
+      "ExitTitle": "Opuszczenie historii?",
+      "ExitButton": "Rzut na opuszczenie historii",
+      "ExitNotAll": "Nie wszystkie 8 Stanów jest zaznaczonych.",
+      "ExitPrompt": "{name} ma zaznaczone wszystkie 8 Stanów! Rzuć 2k6 + najwyższa cecha, aby sprawdzić, czy opuszczasz historię.",
+      "ScarReminder": "Masz teraz fizyczną lub psychiczną bliznę: zapisz ją na karcie.",
+      "NewItem": "Nowy magiczny przedmiot",
+      "Use": "Użyj (rzut +Magia)",
+      "Edit": "Edytuj",
+      "Delete": "Usuń",
+      "Description": "Opis",
+      "ItemsHelp": "Przeciągnij tu przedmioty z kompendium; kliknij nazwę, aby go użyć.",
+      "HousePoints": "Przyznaj / odejmij punkty",
+      "PointsAmount": "Punkty",
+      "Points5": "5 – drobne rzeczy (dobra odpowiedź na lekcji / nieuwaga)",
+      "Points10": "10 – mniejsze rzeczy (sprytna praca domowa / spóźnienie)",
+      "Points20": "20 – znaczące rzeczy (nieposłuszeństwo wobec nauczyciela, wyjście po ciszy nocnej)",
+      "Points50": "50 – ważne rzeczy (uratowanie / narażenie innego ucznia)",
+      "PointsGive": "Przyznaj punkty",
+      "PointsTake": "Odejmij punkty",
+      "PointsReason": "Powód",
+      "PointsGiven": "{points} punktów dla domu {house}!",
+      "PointsTaken": "{points} punktów mniej dla domu {house}!",
+      "Confirm": "Zatwierdź",
+      "StartPoints": "Wylosuj punkty startowe",
+      "StartPointsConfirm": "Rzucić 1k6 dla każdego domu na tabeli punktów postaci niezależnych (250 do 375)? Obecne punkty zostaną zastąpione.",
+      "RollWinner": "Wylosuj zeszłorocznego zwycięzcę (tabela domów)",
+      "EndSession": "Koniec sesji",
+      "EndSessionMsg": "<ul><li>Każdy gracz może dopisać lub skreślić Przyjaciół i Rywali.</li><li>Gracze z 4 punktami Doświadczenia wybierają Awans.</li><li>Czy są nowe Tajemnice do zapisania lub rozwiązane do skreślenia?</li><li>Zaktualizuj Zagrożenia.</li></ul>",
+      "EndSessionAdvance": "Awans do wybrania: {names}",
+      "EndYear": "Koniec roku szkolnego",
+      "EndYearConfirm": "Wszystkie postacie główne odzyskują wszystkie punkty Szczęścia.",
+      "AdvanceYear": "Przenieś uczniów na kolejny rok",
+      "EndYearMsg": "<p>Rok szkolny dobiegł końca: każda czarodziejka i czarodziej odzyskuje Szczęście i wybiera Awans. Nie zapomnij przyznać Pucharu Domów i Pucharu Quidditcha!</p>"
     }
   },
   "MOVES": {
@@ -398,6 +488,18 @@
       "success": "Przy wyniku 10+, przedmiot działa dokładnie tak, jak się spodziewałeś i w pełni z niego korzystasz.",
       "compromise": "Przy wyniku 7-9, wybierz jedno:<br>• Przedmiot robi coś nieoczekiwanego, ale pomocnego.<br>• Efekt przedmiotu nie jest tak potężny, jak powinien.<br>• Przedmiot działa zgodnie z oczekiwaniami, ale otrzymujesz Stan związany z jego użyciem.<br>• Przedmiot działa, ale ulega zniszczeniu w wyniku procesu jego użytkowania.",
       "failure": "Przy wyniku 6-, zaznacz punkt Doświadczenia. Magiczny przedmiot nie działa poprawnie, a Narrator może opowiedzieć Ci o poważnych konsekwencjach, które wynikają z tego niepowodzenia."
+    },
+    "mecz-quidditcha": {
+      "name": "GRANIE MECZU QUIDDITCHA",
+      "success": "Przy wyniku 10+, zachowujesz kontrolę nad meczem, a twoja drużyna zdobywa 10 punktów!",
+      "compromise": "Przy wyniku 7-9, żadna drużyna nie zdobywa punktów, a kontrolę nad meczem przekazujesz osobie po Twojej lewej. Twoja drużyna nie zdobywa punktów, ponieważ (wybierz jedno)...<br>• Ktoś w Twojej drużynie nie trafia rzutu lub nie łapie piłki!<br>• Ktoś w Twojej drużynie zostaje trafiony Tłuczkiem!<br>• Akcja Twojej drużyny nie idzie zgodnie z planem!<br>• Przeciwna drużyna przeprowadza podstępny manewr!",
+      "failure": "Przy wyniku 6-, zaznacz punkt Doświadczenia i przekaż kontrolę nad meczem osobie po swojej lewej. Twoja drużyna nie zdobywa punktu, a Narrator opisuje, jak przeciwna drużyna zdobywa 10 punktów. Narrator może także opowiedzieć o poważnych konsekwencjach wynikających z tego działania."
+    },
+    "zloty-znicz": {
+      "name": "ŁAPANIE ZŁOTEGO ZNICZA",
+      "success": "Przy wyniku 10+, udaje się! Twoja drużyna łapie Złoty Znicz i kończy mecz, zdobywając 150 punktów.",
+      "compromise": "Przy wyniku 7-9, Twoja drużyna nie jest w stanie złapać Złotego Znicza, ale również druga drużyna nie ma sukcesu. Przekaż kontrolę nad meczem osobie po Twojej lewej.",
+      "failure": "Przy wyniku 6-, zaznacz punkt Doświadczenia. Twojej drużynie nie udaje się złapać Złotego Znicza, a druga drużyna zdobywa go za 150 punktów. Narrator może także opowiedzieć o poważnych konsekwencjach wynikających z tej próby."
     }
   }
 }
