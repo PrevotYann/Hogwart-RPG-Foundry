@@ -1,8 +1,9 @@
 import { HogwartNarratorSheet } from "./narrator-sheet.js";
-import { wykonajRzutCechy, rzucZaklecie, uzyjPrzedmiotu, rzutQuidditch, rzutOpuszczenia, uzyjSzczescia, wszystkieStany, ogloszenieOpuszczenia, SYSTEM_ID } from "./dice.js";
+import { HogwartNpcSheet } from "./npc-sheet.js";
+import { wykonajRzutCechy, rzucZaklecie, rzucZaklecieZPrzedmiotu, uzyjPrzedmiotu, rzutQuidditch, rzutOpuszczenia, uzyjSzczescia, wszystkieStany, ogloszenieOpuszczenia, SYSTEM_ID } from "./dice.js";
 import { inicjalizujSceneStartowa } from "./sceneManager.js";
 import { wykonajRuch } from "./moves.js";
-import { przygotujZaklecia } from "./spells.js";
+import { przygotujZaklecia, TYPY_ZAKLEC } from "./spells.js";
 
 const { ActorSheet, ItemSheet } = foundry.appv1.sheets;
 const { DocumentSheetConfig } = foundry.applications.apps;
@@ -32,6 +33,10 @@ export class HogwartActorSheet extends ActorSheet {
         for (let item of context.items) {
             item.img = item.img || Item.DEFAULT_ICON;
             if (item.type === "zaklecie") {
+                const typ = TYPY_ZAKLEC[item.system?.typ] || TYPY_ZAKLEC.urok;
+                item.ikona = typ.ikona;
+                item.klasa = typ.klasa;
+                item.etykieta = game.i18n.localize(typ.etykieta);
                 context.zaklecia.push(item);
             } else {
                 context.przedmioty.push(item);
@@ -84,6 +89,7 @@ export class HogwartActorSheet extends ActorSheet {
         html.find('.item-edit').click(this._onItemEdit.bind(this));
         html.find('.item-delete').click(this._onItemDelete.bind(this));
         html.find('.item-use').click(this._onItemUse.bind(this));
+        html.find('.item-cast').click(this._onItemCast.bind(this));
     }
 
     async _onItemCreate(event) {
@@ -91,7 +97,7 @@ export class HogwartActorSheet extends ActorSheet {
         const header = event.currentTarget;
         const type = header.dataset.type || "przedmiot";
         const itemData = {
-            name: game.i18n.localize("HOGWART.UI.NewItem"),
+            name: game.i18n.localize(type === "zaklecie" ? "HOGWART.UI.NewSpell" : "HOGWART.UI.NewItem"),
             type: type,
             system: {}
         };
@@ -118,6 +124,13 @@ export class HogwartActorSheet extends ActorSheet {
         const li = $(event.currentTarget).parents(".item");
         const item = this.actor.items.get(li.data("itemId"));
         if (item) await uzyjPrzedmiotu(this.actor, item);
+    }
+
+    async _onItemCast(event) {
+        event.preventDefault();
+        const li = $(event.currentTarget).parents(".item");
+        const item = this.actor.items.get(li.data("itemId"));
+        if (item) await rzucZaklecieZPrzedmiotu(this.actor, item, { wymusRzut: event.shiftKey });
     }
 
     async _onRoll(event) {
@@ -148,13 +161,19 @@ export class HogwartItemSheet extends ItemSheet {
             classes: ["hogwart", "sheet", "item"],
             template: "systems/systemHogwartRPG/templates/item-sheet.hbs",
             width: 480,
-            height: 420
+            height: 480
         });
     }
 
     getData() {
         const context = super.getData();
         context.system = this.item.toObject(false).system || {};
+        context.jestZakleciem = this.item.type === "zaklecie";
+        if (context.jestZakleciem) {
+            context.typyZaklec = Object.fromEntries(Object.entries(TYPY_ZAKLEC).map(([k, v]) => [k, game.i18n.localize(v.etykieta)]));
+            context.lataZaklec = { 0: game.i18n.localize("HOGWART.UI.SpellNoYear") };
+            for (let rok = 1; rok <= 7; rok++) context.lataZaklec[rok] = game.i18n.localize(`HOGWART.Spells.${rok}Year`);
+        }
         return context;
     }
 }
@@ -180,6 +199,12 @@ Hooks.once("init", async function () {
         types: ["narrator"],
         makeDefault: true,
         label: "HOGWART.UI.SheetNarrator"
+    });
+
+    DocumentSheetConfig.registerSheet(Actor, SYSTEM_ID, HogwartNpcSheet, {
+        types: ["npc"],
+        makeDefault: true,
+        label: "HOGWART.UI.SheetNpc"
     });
 
     DocumentSheetConfig.registerSheet(Item, SYSTEM_ID, HogwartItemSheet, {

@@ -1,0 +1,175 @@
+{
+  "tool": "image_gen.imagegen (built-in)",
+  "style": "Non-photorealistic Harry Potter wizarding gouache and ink storybook illustration",
+  "assets": [
+    {
+      "asset": "couverture",
+      "prompt": "Use case: illustration-story. Asset type: finished adventure cover, landscape 2:1 aspect ratio. Primary request: a richly illustrated non-photorealistic Harry Potter / Hogwarts Halloween mystery cover. A looming magical Scottish gothic school castle at left, midnight indigo sky, pale moon at upper right; foreground glowing carved pumpkins tangled with dark emerald vines and sinister violet flowers shaped like whispering mouths, amber lantern light and wisps of whispered magic. Hand-painted gouache and ink storybook illustration, beautifully textured painterly surfaces, sophisticated whimsical slightly eerie children’s fantasy book art, fine readable shapes. No people. Full bleed, no border. NO text, letters, typography, logos, watermarks. Composition must work at 1200x600. This establishes the visual language for a coherent Foundry adventure asset set: midnight blue, forest green, pumpkin orange, violet, antique gold.",
+      "file": "assets/aventure-citrouilles/couverture.jpg",
+      "transparent_background": false
+    },
+    {
+      "asset": "maps/grande-salle",
+      "prompt": "Use case: style-transfer. Asset type: production Foundry VTT map. Input image is the EXACT spatial layout/edit target, NOT just mood reference. Repaint this schematic as exquisitely finished non-photorealistic Harry Potter storybook gouache-and-ink tabletop battlemap. STRICT orthographic overhead, no isometric, no tilted perspective, no horizon. Match canvas aspect ratio, every footprint, orientation, margin, corridor width, door location and object position from the reference with precision; coordinate numbers below are source-canvas pixels, scale proportionally if output differs. Treat this as texture/material/lighting replacement only. Full bleed. Remove ALL text, lettering, numbers, labels, stamps, glyph boxes AND the drawn square grid; floor tiles must not form a gameplay grid. NO text, NO legend, NO compass, NO watermark. Restrained soft shadows, rich illustrated textures, clear navigable paths; no opaque atmospheric fog, no people or creature tokens. Canvas 2400x1800 (4:3). Hogwarts Great Hall on Halloween. Stone perimeter wall inner edge at x60 and2340,y60 and1740. Single south double door x1050..1350,y1720..1780. EXACTLY four vertical banquet tables x330..550,810..1030,1290..1510,1770..1990 each y520..1520, narrow parallel benches, thin runners red/gold/blue/green respectively left to right. One horizontal staff table x500..1900,y120..280; a low dais x600..1800,y300..400. Preserve wide aisles. Small glowing pumpkins along both side walls, one larger carved pumpkin centered x1200,y1000 in the CENTRAL aisle. Food, plates, tiny candles may dress tables within footprints. Sparse floating candle glow. Remove all schematic labels/grid.",
+      "reference": "grande-salle-reference.png",
+      "file": "assets/aventure-citrouilles/maps/grande-salle.jpg",
+      "transparent_background": false
+    },
+    {
+      "asset": "maps/reserve-bibliotheque",
+      "prompt": "Use case: style-transfer. Asset type: production Foundry VTT map. Input image is the EXACT spatial layout/edit target, NOT just mood reference. Repaint this schematic as exquisitely finished non-photorealistic Harry Potter storybook gouache-and-ink tabletop battlemap. STRICT orthographic overhead, no isometric, no tilted perspective, no horizon. Match canvas aspect ratio, every footprint, orientation, margin, corridor width, door location and object position from the reference with precision; coordinate numbers below are source-canvas pixels, scale proportionally if output differs. Treat this as texture/material/lighting replacement only. Full bleed. Remove ALL text, lettering, numbers, labels, stamps, glyph boxes AND the drawn square grid; floor tiles must not form a gameplay grid. NO text, NO legend, NO compass, NO watermark. Restrained soft shadows, rich illustrated textures, clear navigable paths; no opaque atmospheric fog, no people or creature tokens. Canvas 2000x1400 (10:7). Restricted Hogwarts library. EXACTLY six narrow vertical freestanding bookshelves each width120 height800, y150..950, x200,480,760,1040,1320,1600. Keep ALL aisles same width. Dark carved oak shelving with burgundy blue green gold books, seen straight from ABOVE, book spines without lettering. North chain x180..1880,y140. Librarian desk x150..470,y1000..1110 with amber oil lamp near420,1040. Separate lectern x1580..1780,y1000..1110 with green botanical grimoire at1680,1050. Thin red rope barrier horizontal y1150 fromx100..1900. South central entrance x900..1100,y1260..1340. Stone outer wall inset30. Low warm lamplight, readable brown stone floor, no added shelving. Preserve precise map layout, remove labels and grid.",
+      "reference": "reserve-bibliotheque-reference.png",
+      "file": "assets/aventure-citrouilles/maps/reserve-bibliotheque.jpg",
+      "transparent_background": false
+    },
+    {
+      "asset": "maps/parc-poudlard",
+      "prompt": "Use case: style-transfer. Asset type: production Foundry VTT map. Input image is the EXACT spatial layout/edit target, NOT just mood reference. Repaint this schematic as exquisitely finished non-photorealistic Harry Potter storybook gouache-and-ink tabletop battlemap. STRICT orthographic overhead, no isometric, no tilted perspective, no horizon. Match canvas aspect ratio, every footprint, orientation, margin, corridor width, door location and object position from the reference with precision; coordinate numbers below are source-canvas pixels, scale proportionally if output differs. Treat this as texture/material/lighting replacement only. Full bleed. Remove ALL text, lettering, numbers, labels, stamps, glyph boxes AND the drawn square grid; floor tiles must not form a gameplay grid. NO text, NO legend, NO compass, NO watermark. Restrained soft shadows, rich illustrated textures, clear navigable paths; no opaque atmospheric fog, no people or creature tokens. Canvas 3000x2000 (3:2). Overhead illustrated Hogwarts grounds at Halloween night, no sky/horizon. Keep castle footprint NW EXACT: main650x520 at150,150, towers140x240 at100,100;150x280 at700,80;120x200 at380,40;160x180 at560,560. Depict slate gothic rooftops from ABOVE, no expansion. Six glasshouses EXACT120x200 atx1150,1300,1450,1600,1750,1900 all y650, rounded corners40. Seventh overgrown glasshouse EXACT260x360 at2000,1050, roundcorners60, violet vines. Keeper hut200x150 at1700,1450. Pumpkin patch two rows seven pumpkins x1250..1670,y1350 and1440. Lake SW follows original shoreline from0,1250 curving to900,1450 and950,2000. Dense forest ONLY eastern band x2300..3000, preserve edge. Winding path40px from850,700 through1500,1000 to2050,1150; south branch30px from1500,1000 to1400,1600. Leave open grass where source labels and moon were; do not paint a moon on ground. No additional buildings, no mountains, no sky; keep all original footprints and playable open ground. Cool moonlight with amber window highlights.",
+      "reference": "parc-poudlard-reference.png",
+      "file": "assets/aventure-citrouilles/maps/parc-poudlard.jpg",
+      "transparent_background": false
+    },
+    {
+      "asset": "maps/serre-7",
+      "prompt": "Use case: precise-object-edit. Two inputs: Image1 schematic is EXACT spatial geometry, Image2 finished painting is the style and texture reference. Correct ONLY the greenhouse spatial footprint in Image2 so that it follows Image1 precisely. Retain the beautiful gouache-painted overhead Halloween greenhouse style, materials, vines,12 pumpkins,3 workbenches, openings and light. Export full canvas4:3, conceptual2400x1800. Outer greenhouse wall must occupy x200..2200,y150..1600, rounded corners radius200, leaving a clearly visible 200pixel wide strip of dark leafy exterior EACH side,150pixels north and200south. The first painting made building too WIDE and close to edges. Reduce width to EXACTLY83.33percent canvas, not90percent. Top wall at8.33percent height, bottom at88.89percent height. South door centered1200,1610. Benches250x90 at300,300 and300,1250 and1850,1250. Central plant centered1200,850, diameter460. Twelve pumpkins x1650,1770,1890,2010 at y330,470,610. West broken pane x200,y650, east brokenpane x2200,y460. Fine soil paths remain open. NO roof, no perspective, no text whatsoever, no grid whatsoever, no ghost figures. Use Image1 edges as rigid footprint alignment guide. Preserve aspect ratio and composition exactly.",
+      "reference": [
+        "serre-7-reference.png",
+        "first generated serre-7"
+      ],
+      "file": "assets/aventure-citrouilles/maps/serre-7.jpg",
+      "transparent_background": false
+    },
+    {
+      "asset": "tokens/leonie-barbefeu",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG portrait token, square 1:1, 1024px. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich hand-painted texture, expressive face, antique gold details, midnight-blue shadows, warm lantern highlights. Single subject chest-up centered, face large and clearly readable at small scale. A complete thin circular metal rim inset 5 percent from every edge encloses both the portrait and its dark softly painted background. Outside circle genuinely transparent; no squares, text, letters, names, logos, watermarks, photorealism or actor likeness. Léonie Barbefeu, a 13-year-old Gryffindor girl, short with vivid ginger hair and many freckles, bold cheerful grin, black school robe, red and gold scarf. Bronze-gold circular rim.",
+      "file": "assets/aventure-citrouilles/tokens/leonie-barbefeu.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/tobias-plumerai",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG portrait token, square 1:1, 1024px. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich hand-painted texture, expressive face, antique gold details, midnight-blue shadows, warm lantern highlights. Single subject chest-up centered, face large and clearly readable at small scale. A complete thin circular metal rim inset 5 percent from every edge encloses both the portrait and its dark softly painted background. Outside circle genuinely transparent; no squares, text, letters, names, logos, watermarks, photorealism or actor likeness. Tobias Plumerai, a 13-year-old Ravenclaw boy, medium tan skin, slender, black slightly untidy hair, thoughtful curious face, black school robe and blue-and-bronze scarf, a small notebook in hand without visible writing. Bronze circular rim.",
+      "file": "assets/aventure-citrouilles/tokens/tobias-plumerai.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/capucine-ashby",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG portrait token, square 1:1, 1024px. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich hand-painted texture, expressive face, antique gold details, midnight-blue shadows, warm lantern highlights. Single subject chest-up centered, face large and clearly readable at small scale. A complete thin circular metal rim inset 5 percent from every edge encloses both the portrait and its dark softly painted background. Outside circle genuinely transparent; no squares, text, letters, names, logos, watermarks, photorealism or actor likeness. Capucine Ashby, a 13-year-old Hufflepuff girl, dark brown skin, chestnut brown curly hair, sturdy build, kind reassuring smile, black school robe and yellow-black scarf, a small biscuit in hand. Antique gold circular rim.",
+      "file": "assets/aventure-citrouilles/tokens/capucine-ashby.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/evariste-corbin",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG portrait token, square 1:1, 1024px. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich hand-painted texture, expressive face, antique gold details, midnight-blue shadows, warm lantern highlights. Single subject chest-up centered, face large and clearly readable at small scale. A complete thin circular metal rim inset 5 percent from every edge encloses both the portrait and its dark softly painted background. Outside circle genuinely transparent; no squares, text, letters, names, logos, watermarks, photorealism or actor likeness. Évariste Corbin, a tall slender 13-year-old Slytherin boy, pale skin, blond neatly combed hair, proud guarded half smile, carefully mended black school robe and emerald-silver tie, holding an old wand. Silver circular rim.",
+      "file": "assets/aventure-citrouilles/tokens/evariste-corbin.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/ambroise-tisserand",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG portrait token, square1:1. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich hand-painted texture, expressive face, antique metal details, midnight-blue shadows, warm lantern highlights. Single subject chest-up centered, face large and readable at small scale. Complete thin circular metal rim encloses portrait and dark softly painted background, keep entire circle visible with transparent margin around it. Outside circle genuinely transparent; no text, letters, names, logos, watermarks, photorealism or actor likeness. Ambroise Tisserand, shy small 12-year-old Hufflepuff boy, ginger hair, rosy cheeks, bashful worried expression, black school robe, yellow-and-black scarf; a small plant pot in slightly muddy hands, botanical greenhouse blurred background. Antique gold rim.",
+      "file": "assets/aventure-citrouilles/tokens/ambroise-tisserand.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/hortense-valeriane",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG portrait token, square1:1. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich hand-painted texture, expressive face, antique metal details, midnight-blue shadows, warm lantern highlights. Single subject chest-up centered, face large and readable at small scale. Complete thin circular metal rim encloses portrait and dark softly painted background, keep entire circle visible with transparent margin around it. Outside circle genuinely transparent; no text, letters, names, logos, watermarks, photorealism or actor likeness. Hortense Valériane, young adult female witch and enthusiastic herbology assistant, rosy cheeks, brown hair in messy bun with little leaves caught in it, nervous friendly smile; practical botanical robes, green dragon-hide gardening gloves dusted with purple pollen, one hand raised near chest, greenhouse shadows. Purple and antique gold rim.",
+      "file": "assets/aventure-citrouilles/tokens/hortense-valeriane.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/octavie-marbrenoire",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG portrait token, square1:1. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich hand-painted texture, expressive face, antique metal details, midnight-blue shadows, warm lantern highlights. Single subject chest-up centered, face large and readable at small scale. Complete thin circular metal rim encloses portrait and dark softly painted background, keep entire circle visible with transparent margin around it. Outside circle genuinely transparent; no text, letters, names, logos, watermarks, photorealism or actor likeness. Octavie Marbrenoire, immaculate tall 15-year-old Slytherin prefect girl, straight dark hair pinned neatly back, cool stern expression, black school robe, emerald and silver tie, polished prefect badge without lettering, clutching a little closed detention notebook, tiny wand light. Thin silver rim.",
+      "file": "assets/aventure-citrouilles/tokens/octavie-marbrenoire.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/anselme-graves",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG portrait token, square1:1. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich hand-painted texture, expressive face, antique metal details, midnight-blue shadows, warm lantern highlights. Single subject chest-up centered, face large and readable at small scale. Complete thin circular metal rim encloses portrait and dark softly painted background, keep entire circle visible with transparent margin around it. Outside circle genuinely transparent; no text, letters, names, logos, watermarks, photorealism or actor likeness. Anselme Graves, mute ghost of a 15-year-old boy from1890, translucent pale blue ethereal face and old-fashioned Ravenclaw wizard school robes, antique blue and bronze neckwear, feather quill tucked behind ear, wistful gentle sad expression, softly luminous edges and spectral mist kept inside silver-blue circular rim, condensation and glass background; clearly a painted ghost, no lettering.",
+      "file": "assets/aventure-citrouilles/tokens/anselme-graves.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/ignace-pommeroy",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG token, square1:1. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich textured brushwork, expressive readable shapes, midnight-blue shadows, warm lantern highlights, no photorealism. Single centered subject, large and readable at small scale. Complete thin circular metal rim encloses subject and dark softly painted background, entire rim visible with margin. Outside circle genuinely transparent. No text, letters, names, logos, watermarks. Professor Ignace Pommeroy, older plump jovial male charms teacher who has organized Halloween banquets for32years; round ruddy face, twinkling eyes, fluffy greying moustache and short beard, little round spectacles, rich plum-purple wizard robes with antique gold trim and soft pointed cap, delighted smile, holding a wand with tiny warm spark. Candlelit great hall background, purple-and-gold thin rim.",
+      "file": "assets/aventure-citrouilles/tokens/ignace-pommeroy.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/ombeline-feuillard",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG token, square1:1. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich textured brushwork, expressive readable shapes, midnight-blue shadows, warm lantern highlights, no photorealism. Single centered subject, large and readable at small scale. Complete thin circular metal rim encloses subject and dark softly painted background, entire rim visible with margin. Outside circle genuinely transparent. No text, letters, names, logos, watermarks. Miss Ombeline Feuillard, severe older female Hogwarts librarian, very thin angular face like a dry old parchment page, greying hair in tight bun, pince-nez glasses, pursed lips and raised eyebrow, high-collared dark plum robes, holding a chained leather book tightly. Restricted library background, thin purple-and-antique-gold rim.",
+      "file": "assets/aventure-citrouilles/tokens/ombeline-feuillard.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/murmurelle",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG token, square1:1. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich textured brushwork, expressive readable shapes, midnight-blue shadows, warm lantern highlights, no photorealism. Single centered subject, large and readable at small scale. Complete thin circular metal rim encloses subject and dark softly painted background, entire rim visible with margin. Outside circle genuinely transparent. No text, letters, names, logos, watermarks. The Murmurelle, a monstrous magical climbing plant, dark emerald tangling tendrils and broad leaves, several LARGE violet-purple flowers shaped as whispering mouths with pale stamens and eerie subtle golden centers. Whole plant creature mass viewed as a clear character portrait, no humanoid body, no pumpkin, no pot, menacing but child-friendly botanical fantasy, deep woodland green background inside thin sage-silver rim.",
+      "file": "assets/aventure-citrouilles/tokens/murmurelle.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/citrouille-mere",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG token, square1:1. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich textured brushwork, expressive readable shapes, midnight-blue shadows, warm lantern highlights, no photorealism. Single centered subject, large and readable at small scale. Complete thin circular metal rim encloses subject and dark softly painted background, entire rim visible with margin. Outside circle genuinely transparent. No text, letters, names, logos, watermarks. The Mother Pumpkin, a truly enormous ribbed old orange pumpkin encased in thick dark green creeping vines, knotty curved stalk, a seam down its side hints it can open to shelter a missing child but show NO child. Mysterious glowing amber carved face, quiet protective menace, violet flower accents. Fill the circle with huge pumpkin and enclosing vines, antique green-bronze circular rim.",
+      "file": "assets/aventure-citrouilles/tokens/citrouille-mere.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/citrouille-echo",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG token, square1:1. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich textured brushwork, expressive readable shapes, midnight-blue shadows, warm lantern highlights, no photorealism. Single centered subject, large and readable at small scale. Complete thin circular metal rim encloses subject and dark softly painted background, entire rim visible with margin. Outside circle genuinely transparent. No text, letters, names, logos, watermarks. One enchanted Echo Pumpkin, orange jack-o-lantern with an expressive small whispering mouth, two triangular amber lit eyes, curled green stalk, tiny root tendrils and soft wisps of whispered magic WITHOUT any letters. Mischievous eerie child-friendly personality. Dark burnt-brown background inside thin copper-orange circular rim.",
+      "file": "assets/aventure-citrouilles/tokens/citrouille-echo.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "tokens/chauves-souris",
+      "prompt": "Use case: illustration-story. Asset type: one finished circular Foundry RPG token, square1:1. Non-photorealistic Harry Potter wizarding storybook illustration, painted gouache and fine ink, rich textured brushwork, expressive readable shapes, midnight-blue shadows, warm lantern highlights, no photorealism. Single centered subject, large and readable at small scale. Complete thin circular metal rim encloses subject and dark softly painted background, entire rim visible with margin. Outside circle genuinely transparent. No text, letters, names, logos, watermarks. A swarm of five enchanted folded BLACK PAPER BATS flying in different directions; crisp folded paper wings, clearly crafted origami silhouettes rather than furry real animals, one large bat center and four smaller bats around it, thin warm amber rim light, subtle violet magical wisps. Dark purple circular background inside thin antique copper rim. No pumpkins.",
+      "file": "assets/aventure-citrouilles/tokens/chauves-souris.png",
+      "transparent_background": true
+    },
+    {
+      "asset": "icons/carnet-ambroise",
+      "prompt": "Use case: illustration-story. Asset type: one finished square inventory icon for Foundry RPG. 1:1 square full-bleed, single large central object occupying75percent of canvas, no cropping. Non-photorealistic Harry Potter magical storybook gouache and ink illustration, sophisticated hand-painted textured brushwork, jewel colors, antique gold highlights, dramatic soft lantern lighting. Dark softly mottled midnight background, thin subtle antique gold rounded-square border inset4percent, easy to identify at64pixels. No text, letters, title, labels, runes, watermark, logos, hands, people or extra unrelated objects. A small worn yellow-and-black schoolboy botanical notebook, golden ochre fabric cover, black spine and elastic strap, little hand-drawn green leaves on cover WITHOUT ANY WRITING. Slight three-quarter object view, warm muted golden light.",
+      "file": "assets/aventure-citrouilles/icons/carnet-ambroise.png",
+      "transparent_background": false
+    },
+    {
+      "asset": "icons/flore-des-murmures",
+      "prompt": "Use case: illustration-story. Asset type: one finished square inventory icon for Foundry RPG. 1:1 square full-bleed, single large central object occupying75percent of canvas, no cropping. Non-photorealistic Harry Potter magical storybook gouache and ink illustration, sophisticated hand-painted textured brushwork, jewel colors, antique gold highlights, dramatic soft lantern lighting. Dark softly mottled midnight background, thin subtle antique gold rounded-square border inset4percent, easy to identify at64pixels. No text, letters, title, labels, runes, watermark, logos, hands, people or extra unrelated objects. An ancient dark forest-green leather botanical grimoire bound with tarnished silver chain, brass corners, embossed violet whispering flower motif on cover. A hefty magical restricted-library book, no title or lettering, subtle violet-green enchantment.",
+      "file": "assets/aventure-citrouilles/icons/flore-des-murmures.png",
+      "transparent_background": false
+    },
+    {
+      "asset": "icons/graine-murmurelle",
+      "prompt": "Use case: illustration-story. Asset type: one finished square inventory icon for Foundry RPG. 1:1 square full-bleed, single large central object occupying75percent of canvas, no cropping. Non-photorealistic Harry Potter magical storybook gouache and ink illustration, sophisticated hand-painted textured brushwork, jewel colors, antique gold highlights, dramatic soft lantern lighting. Dark softly mottled midnight background, thin subtle antique gold rounded-square border inset4percent, easy to identify at64pixels. No text, letters, title, labels, runes, watermark, logos, hands, people or extra unrelated objects. One large brown botanical seed shaped like a teardrop, woody textured shell veined with glowing violet hairline channels, small curling pale green sprout at tip, faint purple whispered magic wisps. Only one seed, close enough to read, luminous against dark earthy background.",
+      "file": "assets/aventure-citrouilles/icons/graine-murmurelle.png",
+      "transparent_background": false
+    },
+    {
+      "asset": "icons/lanterne-citrouille",
+      "prompt": "Use case: illustration-story. Asset type: one finished square inventory icon for Foundry RPG. 1:1 square full-bleed, single large central object occupying75percent of canvas, no cropping. Non-photorealistic Harry Potter magical storybook gouache and ink illustration, sophisticated hand-painted textured brushwork, jewel colors, antique gold highlights, dramatic soft lantern lighting. Dark softly mottled midnight background, thin subtle antique gold rounded-square border inset4percent, easy to identify at64pixels. No text, letters, title, labels, runes, watermark, logos, hands, people or extra unrelated objects. One small enchanted carved pumpkin lantern, bright warm golden eternal candlelight shining through triangular eyes and friendly crooked mouth, orange ribbed flesh, curved green stalk and simple thin curved iron carrying handle over the pumpkin. Magical amber light, dark woodland background.",
+      "file": "assets/aventure-citrouilles/icons/lanterne-citrouille.png",
+      "transparent_background": false
+    },
+    {
+      "asset": "icons/gants-hortense",
+      "prompt": "Use case: illustration-story. Asset type: one finished square inventory icon for Foundry RPG. 1:1 square full-bleed, single large central object occupying75percent of canvas, no cropping. Non-photorealistic Harry Potter magical storybook gouache and ink illustration, sophisticated hand-painted textured brushwork, jewel colors, antique gold highlights, dramatic soft lantern lighting. Dark softly mottled midnight background, thin subtle antique gold rounded-square border inset4percent, easy to identify at64pixels. No text, letters, title, labels, runes, watermark, logos, hands, people or extra unrelated objects. A pair of worn dark green dragon-hide gardening gloves, overlapping palm and back, five fingers each, supple scaled leather, long protective cuffs, lightly stained with violet pollen. Clear single pair, no human hands inside them.",
+      "file": "assets/aventure-citrouilles/icons/gants-hortense.png",
+      "transparent_background": false
+    },
+    {
+      "asset": "icons/vox-reddita",
+      "prompt": "Use case: illustration-story. Asset type: one finished square inventory icon for Foundry RPG. 1:1 square full-bleed, single large central object occupying75percent of canvas, no cropping. Non-photorealistic Harry Potter magical storybook gouache and ink illustration, sophisticated hand-painted textured brushwork, jewel colors, antique gold highlights, dramatic soft lantern lighting. Dark softly mottled midnight background, thin subtle antique gold rounded-square border inset4percent, easy to identify at64pixels. No text, letters, title, labels, runes, watermark, logos, hands, people or extra unrelated objects. A single slender antique wooden magic wand angled lower-left to upper-right releasing luminous pale blue and silver curling sound-wave ribbons that suggest a lost voice being returned, a few warm gold sparks. No written words, no musical notes, no humanoid faces. Blue magical background.",
+      "file": "assets/aventure-citrouilles/icons/vox-reddita.png",
+      "transparent_background": false
+    },
+    {
+      "asset": "icons/philtre-rossignol",
+      "prompt": "Use case: illustration-story. Asset type: one finished square inventory icon for Foundry RPG. 1:1 square full-bleed, single large central object occupying75percent of canvas, no cropping. Non-photorealistic Harry Potter magical storybook gouache and ink illustration, sophisticated hand-painted textured brushwork, jewel colors, antique gold highlights, dramatic soft lantern lighting. Dark softly mottled midnight background, thin subtle antique gold rounded-square border inset4percent, easy to identify at64pixels. No text, letters, title, labels, runes, watermark, logos, hands, people or extra unrelated objects. One elegant round-bottomed clear glass potion flask with narrow neck and cork stopper, filled with rich translucent violet honey-scented liquid and tiny golden bubbles, a small blue-grey songbird feather tied to neck with gold thread. No label, no writing, purple magical glow.",
+      "file": "assets/aventure-citrouilles/icons/philtre-rossignol.png",
+      "transparent_background": false
+    },
+    {
+      "asset": "icons/lumos-solem",
+      "prompt": "Use case: illustration-story. Asset type: one finished square inventory icon for Foundry RPG. 1:1 square full-bleed, single large central object occupying75percent of canvas, no cropping. Non-photorealistic Harry Potter magical storybook gouache and ink illustration, sophisticated hand-painted textured brushwork, jewel colors, antique gold highlights, dramatic soft lantern lighting. Dark softly mottled midnight background, thin subtle antique gold rounded-square border inset4percent, easy to identify at64pixels. No text, letters, title, labels, runes, watermark, logos, hands, people or extra unrelated objects. One slender dark wooden magic wand angled lower-left to upper-right emitting a brilliant warm golden sunburst of real sunlight at its tip, pale gold rays with soft orange halo, clean readable central white-gold light. Dark midnight-blue background, no moon, no words, no face.",
+      "file": "assets/aventure-citrouilles/icons/lumos-solem.png",
+      "transparent_background": false
+    }
+  ]
+}

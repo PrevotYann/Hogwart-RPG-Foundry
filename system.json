@@ -2,7 +2,7 @@
   "id": "systemHogwartRPG",
   "title": "Hogwart RPG",
   "description": "Foundry system for Hogwarts RPG, powered by the PBTA engine. Available in English, Polish and French. The system and mechanics were designed by David Brunell-Brutman.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "compatibility": {
     "minimum": "13",
     "verified": "14",
@@ -41,7 +41,8 @@
   "documentTypes": {
     "Actor": {
       "character": {},
-      "narrator": {}
+      "narrator": {},
+      "npc": { "htmlFields": ["opis", "ruchy", "sekret"] }
     },
     "Item": {
       "przedmiot": {},
@@ -76,6 +77,13 @@
       "path": "packs/tables-fr",
       "type": "RollTable",
       "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" }
+    },
+    {
+      "name": "aventure-citrouilles",
+      "label": "Aventure : Les Citrouilles qui murmuraient (FR)",
+      "path": "packs/aventure-citrouilles",
+      "type": "Adventure",
+      "ownership": { "PLAYER": "NONE", "ASSISTANT": "OWNER" }
     }
   ],
   "packFolders": [
@@ -83,12 +91,12 @@
       "name": "Hogwarts RPG",
       "sorting": "m",
       "color": "#7a0303",
-      "packs": ["regles-fr", "livres-pdf", "objets-magiques-fr", "tables-fr"]
+      "packs": ["aventure-citrouilles", "regles-fr", "livres-pdf", "objets-magiques-fr", "tables-fr"]
     }
   ],
   "url": "https://github.com/PrevotYann/Hogwart-RPG-Foundry",
   "manifest": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/releases/latest/download/system.json",
-  "download": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/releases/download/v2.0.0/system.zip",
+  "download": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/releases/download/v2.1.0/system.zip",
   "readme": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/blob/main/README.md",
   "bugs": "https://github.com/PrevotYann/Hogwart-RPG-Foundry/issues"
 }

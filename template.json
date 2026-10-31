@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": [ "character", "narrator" ],
+    "types": [ "character", "narrator", "npc" ],
     "character": {
       "biografia": "",
       "odwaga": 0,
@@ -100,6 +100,15 @@
           "krok": ""
         }
       }
+    },
+    "npc": {
+      "rodzaj": "uczen",
+      "dom": "",
+      "rola": "",
+      "cecha": "",
+      "opis": "",
+      "ruchy": "",
+      "sekret": ""
     }
   },
   "Item": {
@@ -109,7 +118,8 @@
     },
     "zaklecie": {
       "opis": "",
-      "rok": 1
+      "rok": 1,
+      "typ": "urok"
     }
   }
 }

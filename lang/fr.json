@@ -2,7 +2,8 @@
   "TYPES": {
     "Actor": {
       "character": "Personnage principal",
-      "narrator": "Narratrice"
+      "narrator": "Narratrice",
+      "npc": "Personnage de la Narratrice / Créature"
     },
     "Item": {
       "przedmiot": "Objet magique",
@@ -323,6 +324,13 @@
       "op": "Écris ici l’histoire de ton personnage..."
     },
     "Glowna": {
+      "1": "1re année",
+      "2": "2e année",
+      "3": "3e année",
+      "4": "4e année",
+      "5": "5e année",
+      "6": "6e année",
+      "7": "7e année",
       "Name": "Nom",
       "Nameo": "Prénom et nom de famille...",
       "House": "Maison",
@@ -340,14 +348,7 @@
       "Patronus": "Patronus",
       "Pure": "Sang-pur",
       "Half": "Sang-mêlé",
-      "Muggleborn": "Né-moldu",
-      "1": "1re année",
-      "2": "2e année",
-      "3": "3e année",
-      "4": "4e année",
-      "5": "5e année",
-      "6": "6e année",
-      "7": "7e année"
+      "Muggleborn": "Né-moldu"
     },
     "Hexed": {
       "Tytul": "Choisis le Trait",
@@ -451,10 +452,40 @@
       "EndYear": "Fin de l’année scolaire",
       "EndYearConfirm": "Tous les Personnages Principaux regagnent tous leurs points de Chance.",
       "AdvanceYear": "Faire passer les élèves à l’année suivante",
-      "EndYearMsg": "<p>L’année scolaire est terminée : chaque sorcière et sorcier regagne tous ses points de Chance et choisit un Progrès. N’oublie pas de remettre la Coupe des Quatre Maisons et la Coupe de Quidditch !</p>"
+      "EndYearMsg": "<p>L’année scolaire est terminée : chaque sorcière et sorcier regagne tous ses points de Chance et choisit un Progrès. N’oublie pas de remettre la Coupe des Quatre Maisons et la Coupe de Quidditch !</p>",
+      "SheetNpc": "Personnage de la Narratrice / Créature",
+      "NewSpell": "Nouveau sort",
+      "Cast": "Lancer (jet + Magie)",
+      "CustomSpells": "Sorts et potions supplémentaires",
+      "CustomSpellsHelp": "Glisse ici des sorts ou potions (aventures, compendiums) : les avoir sur ta fiche signifie que tu les connais. Clique sur un nom pour le lancer.",
+      "SpellType": "Type",
+      "SpellYear": "Année",
+      "SpellNoYear": "Hors programme"
+    },
+    "Npc": {
+      "KindLabel": "Type",
+      "Kind": {
+        "uczen": "Élève",
+        "nauczyciel": "Professeur·e",
+        "personel": "Personnel de Poudlard",
+        "duch": "Fantôme",
+        "stworzenie": "Créature magique",
+        "inny": "Autre"
+      },
+      "NoHouse": "— Aucune —",
+      "RolePlaceholder": "ex. : Rival de Harry, Professeur de Sortilèges",
+      "TraitPlaceholder": "ex. : nerveux, voix grave",
+      "Description": "Description",
+      "Moves": "Actions de la Narratrice",
+      "MovesHelp": "Ce que ce personnage ou cette créature fait quand tu joues une Action de Narratrice ou une Sérieuse Conséquence (les Personnages de la Narratrice ne jettent jamais les dés).",
+      "Secret": "Secret (visible par la Narratrice seulement)",
+      "AddToNotes": "Ajouter aux Notes de la Narratrice",
+      "NoNarrator": "Aucun acteur « Narratrice » (Notes de la Narratrice) dont tu es propriétaire.",
+      "NotesFull": "Les 6 lignes « Personnages de la Narratrice » sont déjà remplies.",
+      "AddedToNotes": "{name} a été ajouté·e aux notes « {notes} ».",
+      "AlreadyInNotes": "{name} figure déjà dans les notes « {notes} »."
     }
   },
-
   "MOVES": {
     "stan-w-obliczu": {
       "name": "FAIRE FACE AU DANGER",

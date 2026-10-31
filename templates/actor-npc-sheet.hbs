@@ -1,0 +1,45 @@
+<form class="hogwart-npc" autocomplete="off">
+    <header class="hg-npc-naglowek">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" width="110" height="110" />
+        <div class="hg-npc-tozsamosc">
+            <input class="hg-npc-nazwa" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'HOGWART.Glowna.Name'}}" />
+            <div class="hg-npc-pola">
+                <label>{{localize "HOGWART.Npc.KindLabel"}}
+                    <select name="system.rodzaj">{{selectOptions rodzaje selected=system.rodzaj}}</select>
+                </label>
+                <label>{{localize "HOGWART.Narrator.Dom"}}
+                    <select name="system.dom">{{selectOptions domy selected=system.dom}}</select>
+                </label>
+            </div>
+            <div class="hg-npc-pola">
+                <label>{{localize "HOGWART.Narrator.Rola"}}
+                    <input type="text" name="system.rola" value="{{system.rola}}" placeholder="{{localize 'HOGWART.Npc.RolePlaceholder'}}" />
+                </label>
+                <label>{{localize "HOGWART.Narrator.Cecha"}}
+                    <input type="text" name="system.cecha" value="{{system.cecha}}" placeholder="{{localize 'HOGWART.Npc.TraitPlaceholder'}}" />
+                </label>
+            </div>
+            {{#if isGM}}
+            <button type="button" class="hg-do-notatek">♟️ {{localize "HOGWART.Npc.AddToNotes"}}</button>
+            {{/if}}
+        </div>
+    </header>
+
+    <section class="hg-npc-sekcja">
+        <h3>{{localize "HOGWART.Npc.Description"}}</h3>
+        <prose-mirror name="system.opis" value="{{system.opis}}" toggled {{#unless editable}}disabled{{/unless}}>{{{wzbogacone.opis}}}</prose-mirror>
+    </section>
+
+    <section class="hg-npc-sekcja">
+        <h3>{{localize "HOGWART.Npc.Moves"}}</h3>
+        <p class="hg-npc-pomoc">{{localize "HOGWART.Npc.MovesHelp"}}</p>
+        <prose-mirror name="system.ruchy" value="{{system.ruchy}}" toggled {{#unless editable}}disabled{{/unless}}>{{{wzbogacone.ruchy}}}</prose-mirror>
+    </section>
+
+    {{#if isGM}}
+    <section class="hg-npc-sekcja hg-npc-sekret">
+        <h3>🔒 {{localize "HOGWART.Npc.Secret"}}</h3>
+        <prose-mirror name="system.sekret" value="{{system.sekret}}" toggled>{{{wzbogacone.sekret}}}</prose-mirror>
+    </section>
+    {{/if}}
+</form>

@@ -40,6 +40,12 @@ Le système est disponible en français : la terminologie et les textes suivent 
 - Notes de la Narratrice : points de maison (5/10/20/50), points de départ, vainqueur de l’année précédente, fin de session, fin d’année scolaire (Chance regagnée, passage à l’année suivante).
 - Compendiums : Règles (FR), Tables aléatoires (FR) pour la création de personnage, le Patronus, les noms, lieux, créatures, Sérieuses Conséquences…, Objets magiques (FR), et les livres de règles PDF (PL / EN / FR).
 
+**Nouveau (v2.1.0) : aventure « Les Citrouilles qui murmuraient »**
+- Une aventure courte d’Halloween (2 à 5 joueurs, 3 à 4 heures), en français, livrée dans le compendium « Aventure : Les Citrouilles qui murmuraient (FR) ». Ouvrez-le et cliquez sur « Importer l’aventure » : guide de la Narratrice, aides de jeu, 4 pré-tirés, 6 Personnages de la Narratrice, 4 créatures, Notes de la Narratrice pré-remplies, 4 scènes, 3 tables, objets, sorts, potions et une macro sont créés dans le monde.
+- Nouvelle fiche « Personnage de la Narratrice / Créature » (rôle, caractéristique, description, Actions de Narratrice, secret réservé à la Narratrice, bouton pour l’ajouter aux Notes de la Narratrice).
+- Sorts et potions sous forme d’objets : glissés sur une fiche, ils apparaissent dans l’onglet Sorts (« Sorts et potions supplémentaires ») et se lancent d’un clic, avec les mêmes règles que les sorts de la liste.
+- Les 27 illustrations de l’aventure sont finalisées : 4 cartes JPG sans texte ni grille incrustée, 14 portraits et créatures PNG à fond transparent, 8 icônes PNG et une couverture JPG (`assets/aventure-citrouilles/`). Les dimensions des scènes, la grille Foundry de 100 px et les coordonnées des jetons et notes sont conservées. Prompts de génération et détails : [direction artistique](tools/adventure-art.md).
+
 Le contenu du jeu original et de sa traduction est distribué sous licence [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) ; cette œuvre transformative n’est pas à vendre et n’est ni autorisée ni approuvée par J.K. Rowling ou Warner Bros.
 
 **Développement :** les compendiums sont générés depuis `src/packs` avec `tools/build-packs.cjs` (nécessite le module `classic-level` de Foundry) ; `tools/check.mjs` et `tools/validate-packs.mjs` valident le manifeste, les templates, les traductions et les documents.

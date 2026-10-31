@@ -72,7 +72,7 @@ for (const ruch of ["stan-w-obliczu", "zdobadz-czego-szukasz", "pomoz-lub-przesz
 for (let i = 1; i <= 7; i++) used.add(`HOGWART.Spells.${i}Year`);
 for (const p of ["Match", "Snitch"]) for (const c of ["odwaga", "spryt", "intelekt", "lojalnosc"]) used.add(`HOGWART.Quidditch.${p}.${c}`);
 for (const p of [5, 10, 20, 50]) used.add(`HOGWART.UI.Points${p}`);
-for (const t of ["character", "narrator"]) used.add(`TYPES.Actor.${t}`);
+for (const t of ["character", "narrator", "npc"]) used.add(`TYPES.Actor.${t}`);
 for (const t of ["przedmiot", "zaklecie"]) used.add(`TYPES.Item.${t}`);
 
 for (const [lang, keys] of Object.entries(langs)) {

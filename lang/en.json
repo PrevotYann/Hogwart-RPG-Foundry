@@ -2,7 +2,8 @@
   "TYPES": {
     "Actor": {
       "character": "Main Character",
-      "narrator": "Narrator"
+      "narrator": "Narrator",
+      "npc": "Narrator Character / Creature"
     },
     "Item": {
       "przedmiot": "Magical Object",
@@ -425,7 +426,38 @@
       "EndYear": "End of school year",
       "EndYearConfirm": "All main characters regain all their Luck points.",
       "AdvanceYear": "Move students up to the next Year",
-      "EndYearMsg": "<p>The school year is over: every witch and wizard regains all their Luck and takes an Advancement. Don’t forget to award the House Cup and the Quidditch Cup!</p>"
+      "EndYearMsg": "<p>The school year is over: every witch and wizard regains all their Luck and takes an Advancement. Don’t forget to award the House Cup and the Quidditch Cup!</p>",
+      "SheetNpc": "Narrator Character / Creature",
+      "NewSpell": "New spell",
+      "Cast": "Cast (roll + Magic)",
+      "CustomSpells": "Additional spells and potions",
+      "CustomSpellsHelp": "Drop spells or potions here (adventures, compendiums): having them on your sheet means you know them. Click a name to cast it.",
+      "SpellType": "Type",
+      "SpellYear": "Year",
+      "SpellNoYear": "Not on the curriculum"
+    },
+    "Npc": {
+      "KindLabel": "Kind",
+      "Kind": {
+        "uczen": "Student",
+        "nauczyciel": "Professor",
+        "personel": "Hogwarts staff",
+        "duch": "Ghost",
+        "stworzenie": "Magical creature",
+        "inny": "Other"
+      },
+      "NoHouse": "— None —",
+      "RolePlaceholder": "e.g. Harry's Rival, Charms Professor",
+      "TraitPlaceholder": "e.g. nervous, deep voice",
+      "Description": "Description",
+      "Moves": "Narrator Moves",
+      "MovesHelp": "What this character or creature does when you make a Narrator Move or a Hard Move (Narrator characters never roll dice).",
+      "Secret": "Secret (visible to the Narrator only)",
+      "AddToNotes": "Add to the Narrator Notes",
+      "NoNarrator": "No Narrator actor (Narrator Notes) that you own.",
+      "NotesFull": "All 6 Narrator Character rows are already filled.",
+      "AddedToNotes": "{name} was added to the notes \"{notes}\".",
+      "AlreadyInNotes": "{name} is already in the notes \"{notes}\"."
     }
   },
   "MOVES": {

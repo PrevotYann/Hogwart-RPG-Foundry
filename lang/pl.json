@@ -2,7 +2,8 @@
   "TYPES": {
     "Actor": {
       "character": "Postać główna",
-      "narrator": "Narrator"
+      "narrator": "Narrator",
+      "npc": "Postać Narratora / Stworzenie"
     },
     "Item": {
       "przedmiot": "Magiczny przedmiot",
@@ -425,7 +426,38 @@
       "EndYear": "Koniec roku szkolnego",
       "EndYearConfirm": "Wszystkie postacie główne odzyskują wszystkie punkty Szczęścia.",
       "AdvanceYear": "Przenieś uczniów na kolejny rok",
-      "EndYearMsg": "<p>Rok szkolny dobiegł końca: każda czarodziejka i czarodziej odzyskuje Szczęście i wybiera Awans. Nie zapomnij przyznać Pucharu Domów i Pucharu Quidditcha!</p>"
+      "EndYearMsg": "<p>Rok szkolny dobiegł końca: każda czarodziejka i czarodziej odzyskuje Szczęście i wybiera Awans. Nie zapomnij przyznać Pucharu Domów i Pucharu Quidditcha!</p>",
+      "SheetNpc": "Postać Narratora / Stworzenie",
+      "NewSpell": "Nowe zaklęcie",
+      "Cast": "Rzuć (rzut + Magia)",
+      "CustomSpells": "Dodatkowe zaklęcia i eliksiry",
+      "CustomSpellsHelp": "Przeciągnij tutaj zaklęcia lub eliksiry (przygody, kompendia): posiadanie ich na karcie oznacza, że je znasz. Kliknij nazwę, aby rzucić.",
+      "SpellType": "Rodzaj",
+      "SpellYear": "Rok",
+      "SpellNoYear": "Poza programem"
+    },
+    "Npc": {
+      "KindLabel": "Rodzaj",
+      "Kind": {
+        "uczen": "Uczeń",
+        "nauczyciel": "Nauczyciel",
+        "personel": "Personel Hogwartu",
+        "duch": "Duch",
+        "stworzenie": "Magiczne stworzenie",
+        "inny": "Inny"
+      },
+      "NoHouse": "— Brak —",
+      "RolePlaceholder": "np. Rywal Harry'ego, Nauczyciel Zaklęć",
+      "TraitPlaceholder": "np. nerwowy, niski głos",
+      "Description": "Opis",
+      "Moves": "Ruchy Narratora",
+      "MovesHelp": "Co ta postać lub stworzenie robi, gdy wykonujesz Ruch Narratora lub Poważną Konsekwencję (Postacie Narratora nigdy nie rzucają kośćmi).",
+      "Secret": "Sekret (widoczny tylko dla Narratora)",
+      "AddToNotes": "Dodaj do Notatek Narratora",
+      "NoNarrator": "Brak aktora Narratora (Notatki Narratora), którego jesteś właścicielem.",
+      "NotesFull": "Wszystkie 6 wierszy Postaci Narratora jest już wypełnionych.",
+      "AddedToNotes": "Dodano {name} do notatek „{notes}”.",
+      "AlreadyInNotes": "{name} jest już w notatkach „{notes}”."
     }
   },
   "MOVES": {

@@ -3,6 +3,16 @@
         <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" width="64" height="64" />
         <input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'HOGWART.Glowna.Name'}}" />
     </header>
+    {{#if jestZakleciem}}
+    <div class="hg-item-zaklecie">
+        <label>{{localize 'HOGWART.UI.SpellType'}}
+            <select name="system.typ">{{selectOptions typyZaklec selected=system.typ}}</select>
+        </label>
+        <label>{{localize 'HOGWART.UI.SpellYear'}}
+            <select name="system.rok" data-dtype="Number">{{selectOptions lataZaklec selected=system.rok}}</select>
+        </label>
+    </div>
+    {{/if}}
     <div class="form-group stacked">
         <label>{{localize 'HOGWART.UI.Description'}}</label>
         <textarea name="system.opis" rows="10">{{system.opis}}</textarea>

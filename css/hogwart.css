@@ -1393,3 +1393,144 @@ a.nazwa-zaklecia.hg-zaklecie-rzut {
         width: 100%;
         min-height: 220px;
     }
+
+/* --- Spell items (sheet + item sheet) --- */
+.hg-lista-przedmiotow li .item-cast {
+    flex: 1;
+    cursor: pointer;
+}
+
+.hogwart-item-sheet .hg-item-zaklecie {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+    .hogwart-item-sheet .hg-item-zaklecie label {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+    }
+
+/* --- Narrator character / creature sheet --- */
+.hogwart-npc-sheet .window-content {
+    background: #fdfbf7;
+    color: #111;
+    padding: 10px;
+}
+
+.hogwart-npc .hg-npc-naglowek {
+    display: flex;
+    gap: 12px;
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: 8px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+    .hogwart-npc .hg-npc-naglowek .profile-img {
+        flex: 0 0 110px;
+        height: 110px;
+        object-fit: cover;
+        border: 2px solid #000;
+        border-radius: 6px;
+        background: #222;
+    }
+
+.hogwart-npc .hg-npc-tozsamosc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hogwart-npc .hg-npc-nazwa {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    height: auto;
+}
+
+.hogwart-npc .hg-npc-pola {
+    display: flex;
+    gap: 8px;
+}
+
+    .hogwart-npc .hg-npc-pola label {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.85em;
+        font-weight: bold;
+    }
+
+.hogwart-npc .hg-npc-sekcja {
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+    .hogwart-npc .hg-npc-sekcja h3 {
+        text-align: center;
+        background: #000;
+        color: #fff;
+        margin: -8px -8px 8px -8px;
+        padding: 4px;
+        font-size: 0.95em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .hogwart-npc .hg-npc-sekcja prose-mirror {
+        min-height: 90px;
+    }
+
+.hogwart-npc .hg-npc-sekret {
+    border-color: #7a0303;
+    background: #fff6f6;
+}
+
+    .hogwart-npc .hg-npc-sekret h3 {
+        background: #7a0303;
+    }
+
+.hogwart-npc .hg-npc-pomoc {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #555;
+    margin: 0 0 6px 0;
+}
+
+.hogwart-npc-sheet.gryffindor .hg-npc-naglowek { border-color: #7f0909; }
+.hogwart-npc-sheet.hufflepuff .hg-npc-naglowek { border-color: #d4a017; }
+.hogwart-npc-sheet.ravenclaw .hg-npc-naglowek { border-color: #0e1a40; }
+.hogwart-npc-sheet.slytherin .hg-npc-naglowek { border-color: #1a472a; }
+
+/* --- Adventure journal (Les Citrouilles qui murmuraient) --- */
+.hg-aventure .hg-encart {
+    border: 2px solid #7a4a00;
+    border-radius: 6px;
+    background: #fff4e0;
+    padding: 6px 10px;
+    margin: 8px 0;
+}
+
+.hg-aventure .hg-lire {
+    border-left: 4px solid #7a0303;
+    background: #f6efe6;
+    font-style: italic;
+    padding: 6px 10px;
+    margin: 8px 0;
+}
+
+.hg-aventure .hg-document {
+    font-family: 'Signika', cursive;
+    background: #f3e9cf;
+    border: 1px solid #b59b62;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 12px 16px;
+    margin: 8px 0;
+}

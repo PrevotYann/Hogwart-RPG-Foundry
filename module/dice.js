@@ -300,11 +300,32 @@ export async function uzyjSzczescia(message) {
 export async function rzucZaklecie(actor, zaklecieId, { wymusRzut = false } = {}) {
     const zaklecie = pobierzZaklecie(zaklecieId);
     if (!zaklecie) return;
+    return rzucOpisaneZaklecie(actor, {
+        typ: zaklecie.typ,
+        rok: zaklecie.rok,
+        nazwa: nazwaZaklecia(zaklecie),
+        opis: opisZaklecia(zaklecie),
+        znane: !!actor.system.zaklecia?.[zaklecieId],
+        wymusRzut
+    });
+}
 
-    const eliksir = zaklecie.typ === "eliksir";
+// Zaklęcie lub eliksir jako przedmiot (typ "zaklecie"): posiadanie go na karcie = znajomość
+export async function rzucZaklecieZPrzedmiotu(actor, item, { wymusRzut = false } = {}) {
+    const opis = item.system?.opis || "";
+    return rzucOpisaneZaklecie(actor, {
+        typ: item.system?.typ || "urok",
+        rok: Number(item.system?.rok) || 0,
+        nazwa: item.name,
+        opis: foundry.utils.escapeHTML ? foundry.utils.escapeHTML(opis) : opis,
+        znane: true,
+        wymusRzut
+    });
+}
+
+async function rzucOpisaneZaklecie(actor, { typ, rok, nazwa, opis, znane, wymusRzut }) {
+    const eliksir = typ === "eliksir";
     const ruchId = eliksir ? "uwarz-eliksir" : "rzuc-zaklecie";
-    const nazwa = nazwaZaklecia(zaklecie);
-    const opis = opisZaklecia(zaklecie);
     const tytul = `${t(eliksir ? "HOGWART.UI.BrewTitle" : "HOGWART.UI.CastTitle")} : ${nazwa}`;
 
     if (actor.system.stanNieprzytomny === true) {
@@ -313,11 +334,9 @@ export async function rzucZaklecie(actor, zaklecieId, { wymusRzut = false } = {}
     }
 
     let dodatek = opis ? `<em>${opis}</em>` : "";
-    if (zaklecie.typ === "niewybaczalne") {
+    if (typ === "niewybaczalne") {
         dodatek += `<p style="color: #7a0303; margin: 4px 0 0 0;">💀 ${t("HOGWART.Legend.nieOpis2")}</p>`;
     }
-
-    const znane = !!actor.system.zaklecia?.[zaklecieId];
 
     // Nieznane zaklęcie lub eliksir: trzeba zaznaczyć punkt Szczęścia
     if (!znane) {
@@ -338,7 +357,7 @@ export async function rzucZaklecie(actor, zaklecieId, { wymusRzut = false } = {}
 
     // Zaklęcia z co najmniej dwóch lat wcześniej udają się bez rzutu (poza stresującą sytuacją)
     const rokPostaci = Number(actor.system.rokNauki) || 1;
-    if (!eliksir && zaklecie.rok > 0 && zaklecie.rok <= rokPostaci - 2 && !wymusRzut) {
+    if (!eliksir && rok > 0 && rok <= rokPostaci - 2 && !wymusRzut) {
         await ChatMessage.create({
             speaker: ChatMessage.getSpeaker({ actor }),
             content: `<div class="hogwart-move-result" style="border: 2px solid #27ae60; padding: 10px; border-radius: 5px;">
